@@ -1,5 +1,9 @@
 body{
     background-image: url("https://i.pinimg.com/736x/37/dd/57/37dd57bebac43cbd3da15bceed28a43a--grunge-texture.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .container{
@@ -13,12 +17,12 @@ body{
 }
 header{
     background-image: url("imageport.png");
-    height: 9rem;
+    height: 7rem;
 }
 
 header span{
     display: flex;
-    padding-top: 45px;
+    padding-top: 35px;
     padding-left: 6rem;
     color: white;
     font-weight: 500;
