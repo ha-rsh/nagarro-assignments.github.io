@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin:0
+}
+
+body{
+    background-image: url("https://st3.depositphotos.com/20524830/34562/v/380/depositphotos_345624074-stock-illustration-pokeball-icon-sign-seamless-pattern.jpg?forcejpeg=true");
+}   
+
+.logo-image{
+    width: 55px;
+    height: 55px;
+    float: left;
+    position: relative;
+    top: 3px;
+    padding-left:3rem; 
+}
+
+.logo-title{
+    width: 130px;
+    height: 50px;
+    float: left;
+    position: relative;
+    top: 5px;
+    padding-left:0rem; 
+}
+
+.logo:hover{
+    transition: 0.1s;
+    transform: scale(1.04);
+}
+
+.container{
+    background-color: #FAAD08;
+    box-shadow: black 0 0 10px;
+    height: 4rem;
+}
+
+.logo{
+    display: flex;
+    flex : 1;
+}
+.box{
+    display: flex;
+    flex: 1;
+}
+
+.logo-text{
+    display: flex;
+    padding-right: 44.5rem;
+    padding-top: 21px;
+    font-size: 34px;
+    font-family: Franklin Gothic Medium;
+
+}
+
+.nav-links{
+    display: flex;
+    float: right;
+    padding-top: 29px;
+    padding-right: 3rem;
+}
+
+.nav-links a:hover{
+    transition: 0.1s;
+    transform: scale(1.02);
+    color: #3223D6;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bolder;
+    margin: 0 0.5em;
+    color: var(--main-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.groups{margin: 0 auto;width: 900px;padding: 42px;height: auto; border-radius: 40px;}
+
+.groups li{position: relative;list-style: none;background: #fff;border-radius: 5px;
+    box-shadow: 0 3px 4px 0 #0001;overflow: hidden;margin-bottom: 30px;transition: all 0.3s;}
+
+.groups li:hover{transform: scale(1.04);box-shadow: 0 4px 14px 0 #0005;}
+
+.groups .card{overflow: hidden;display: block;}
+
+.groups .image-session{float: left;overflow: hidden;margin-right: 20px;}
+
+.groups .image-session .image{width: 280px;height: 220px;display: block;background-size: cover;
+    background-position: center;}
+
+.groups .meta-sission{position: relative;padding: 15px;display: block;height: 220px;}
+
+.groups .meta-sission .head{display: flex;margin-bottom: 10px;}
+
+.groups .body .title{height: 60px;overflow: hidden;font-size: 24px;}
+
+.groups .body .desc{height: 103px;overflow: hidden;margin-bottom: 2px;font-size: 13px;}
+
+.groups .footer .button{position: absolute;bottom: 20px;right: 25px;background: #0075ff;color: #fff;
+    line-height: 2.2;padding: 0 20px;border-radius: 50px;text-decoration: none;
+    box-shadow: 0 1px 6px 0 #0004;transition: all 0.3s;}
+
+.groups .footer .button:hover{box-shadow: 0 3px 8px 0 #0005;background: #063a78;right: 15px;}
+
+@media screen and (max-width:780px){.groups{    width: 96%;}
+    .groups li:hover{    transform: none;    box-shadow: none;}
+}
+@media screen and (max-width:560px){.groups .image-session{    float: none;    margin-right: 0;}
+    .groups .image-session .image{width: 100%;}}
+
+.container-pokemon{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-pokemon{
+    background-color: white;
+    width: 270px;
+    height: 450px;
+    margin-right: 30px;
+    margin-top: 80px;
+    border-radius: 15px;
+}
+
+.card-image-pokemon{
+    height: 180px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.pokemon-1{
+    background-image: url("https://c.tenor.com/60AQa9vMkfcAAAAC/pokemon-greninja.gif");
+}
+
+.pokemon-2{
+    background-image: url("https://c.tenor.com/q-dFAzrdw80AAAAC/pokemon-sceptile.gif");
+}
+
+.pokemon-3{
+    background-image: url("https://i.pinimg.com/originals/cd/26/3f/cd263f2e9c0e1d433aa73f407469b59a.gif");
+}
+
+.pokemon-4{
+    background-image: url("https://c.tenor.com/RTwTX_Cw3K0AAAAC/infernape-pokemon-infernape.gif");
+}
+
+.pokemon-5{
+    background-image: url("https://i.kym-cdn.com/photos/images/original/000/261/427/bf5.gif");
+}
+
+.pokemon-6{
+    background-image: url("https://media3.giphy.com/media/Pb1eOAGzQOIDe/giphy.gif");
+}
+
+.pokemon-7{
+    background-image: url("https://i.kym-cdn.com/photos/images/original/001/157/940/3ea.gif");
+}
+
+.pokemon-8{
+    background-image: url("https://c.tenor.com/5JBSQw2eKiAAAAAC/bisharp-shadow.gif");
+}
+
+.pokemon-9{
+    background-image: url("https://giffiles.alphacoders.com/567/56780.gif");
+}
+
+.pokemon-10{
+    background-image: url("https://64.media.tumblr.com/tumblr_m6rlwlgpBu1qd87hlo1_500.gifv");
+}
+
+.card-pokemon h2{
+    padding: 10px;
+}
+
+.card-pokemon p{
+    padding: 10px;
+}
+
+.card-pokemon:hover{
+    background-color: #0A857A;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
