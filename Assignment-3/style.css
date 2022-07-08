@@ -5,6 +5,7 @@
 
 body{
     background-image: url("https://st3.depositphotos.com/20524830/34562/v/380/depositphotos_345624074-stock-illustration-pokeball-icon-sign-seamless-pattern.jpg?forcejpeg=true");
+    background-attachment: fixed;
 }   
 
 .logo-image{
@@ -47,7 +48,7 @@ body{
 
 .logo-text{
     display: flex;
-    padding-right: 44.5rem;
+    padding-right: 46.7rem;
     padding-top: 21px;
     font-size: 34px;
     font-family: Franklin Gothic Medium;
@@ -73,7 +74,7 @@ body{
     font-weight: bolder;
     margin: 0 0.5em;
     color: var(--main-color);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -160,7 +161,8 @@ body{
 .groups .footer .button:hover{
     box-shadow: 0 3px 8px 0 #0005;
     background: #063a78;
-    right: 15px;}
+    right: 15px;
+}
 
 @media screen and (max-width:780px){
     .groups{ 
@@ -257,4 +259,28 @@ body{
     cursor: pointer;
     transform: scale(1.03);
     transition: all 1s ease;
+}
+
+.groups .card:hover{
+    background-color: lightgreen;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.pikachu img{
+    width:200px;
+    height: 200px;
+    position: relative;
+}
+
+.pikachu{
+    display: inline-block;
+    width: 260px;
+}
+
+.pikachu .right-pikachu{
+    position: relative;
+    left: 730px;
+    transform: scalex(-1);
 }
