@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.5"
+  },
+  "name": "nagarro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start":"vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ha-rsh/nagarro-assignments.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ha-rsh/nagarro-assignments.github.io/issues"
+  },
+  "homepage": "https://github.com/ha-rsh/nagarro-assignments.github.io#readme",
+  "description": "",
+  "dependencies": {
+    "vite": "^2.9.14"
+  }
+}

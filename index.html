@@ -7,7 +7,9 @@
     <title>Assignments</title>
     <style>
         body{
-            background-color: black;
+            background-image: url('https://i.pinimg.com/originals/ac/68/e9/ac68e9ede5b84d83bf172fa518f03461.gif');
+            
+            height: 36rem ;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -28,10 +30,10 @@
         h2:hover{transform: scale(1.1);}
         
         .box{
-            display:inline-block;
-            margin-top: 4rem;
-            padding-left: 46rem;
+            position: relative;
             color: white;
+            top:5rem;
+            left: -16rem;
         }
 
         .box-data:hover{
@@ -41,6 +43,8 @@
         .main{
             display: flex;
             flex: 1;
+            width: 60%;
+            
         }
 
         .button{
@@ -62,28 +66,55 @@
         .container{
             padding: 42px;
         }
+        .navbar {
+            color: white;
+            position: fixed;
+            padding: 30px 0;
+            right: 0;
+            left: 0;
+            background-color: transparent;
+        }
+
+        li {
+                display: inline;
+                padding: 30px;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+
 
     </style>
 </head>
 <body>
-    <h1>Nagarro Training</h1>
-    <h2>Assignments</h2>
-    <div class="main">
-        <div class="container">
-            <div class="card">
-                <button class="button" onclick="window.location.href='Assignment-1/pokemon-website.html'">Assignment - 1: pokenmon-website</button>
-            </div> 
-            <div class="card">
-                <button class="button" onclick="window.location.href='Assignment-2/portfolio.html'">Assignment - 2: Portfolio</button>
-            </div>
-            <div class="card">
-                <button class="button" onclick="window.location.href='Assignment-3/pokiweb.html'">Assignment - 3: Pokiweb using javascript</button>
-            </div>
+    <div style="display: flex; position: relative;">
+        <img style="height: 6rem; width: 6rem; border-radius: 50%; position: relative;top: 2rem; left: 3rem; border:2px solid white;" src="https://mma.prnewswire.com/media/844192/Nagarro_Logo.jpg?p=twitter" alt="nagarro-logo">
+        <div style="display: block; position: relative; left:32rem">
+            <h1>Nagarro Training</h1>
+            <h2>Assignments</h2>
         </div>
+    </div>
+    <div style="display: flex;">
+        <div class="main" style="display: block;">
+            <div class="container">
+                <div class="card">
+                    <button class="button" onclick="window.location.href='Assignment-1/pokemon-website.html'">Assignment - 1: pokenmon-website</button>
+                </div> 
+                <div class="card">
+                    <button class="button" onclick="window.location.href='Assignment-2/portfolio.html'">Assignment - 2: Portfolio</button>
+                </div>
+                <div class="card">
+                    <button class="button" onclick="window.location.href='Assignment-3/pokiweb.html'">Assignment - 3: Pokiweb using javascript</button>
+                </div>
+                <div class="card">
+                    <button class="button" onclick="window.location.href='Assignment-4/webd.html'">Assignment - 3: Website using tailwindcss</button>
+                </div>
+            </div>
+        </div>   
         <div class="box">
             <div class="box-data"><h3>Name: Harshit Pandey</h3></div>
             <div class="box-data"><h3>Email: harshitpy123@gmail.com</h3></div>  
-        </div>
-    </div>          
+        </div>    
+    </div>   
 </body>
 </html>
