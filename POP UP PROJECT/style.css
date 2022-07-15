@@ -2,7 +2,8 @@
     margin-top: 30px;
     padding-left: 20px;
     padding-top: 10px;
-    background-color: bisque;
+    background: url('https://images.pexels.com/photos/8715136/pexels-photo-8715136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+    background-size: cover;
     border-radius: 30px;
     height: 340px;
     width:700px;
@@ -10,8 +11,10 @@
 }
 
 body{
-    height: 300px;
-    background: linear-gradient(135deg, #a8ff78, #78ffd6);
+    background-image: url('https://static.vecteezy.com/system/resources/previews/003/366/088/large_2x/old-paper-on-the-wood-background-ancient-scroll-free-photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 #box.show{

@@ -1,23 +1,11 @@
 $(document).ready(function(){
-
-    let toggle = false
-    $('#click').on('click', function(){
-
-        if (toggle == false){
-            $("#box").fadeIn();
-            $("#box").fadeIn("slow");
-            $("#box").fadeIn(5000);
-            $('#box').addClass('show')
-            toggle = true
-        }
-
-        else if (toggle == true){
-            $("#box").fadeOut();
-            $("#box").fadeOut("slow");
-            $("#box").fadeOut(5000);
-            $('#box').removeClass('show');
-            toggle = false
-        }
+    $('#click').click(()=>{
+        $('emailvalidation').hide();
+        $('usernamevalidation').hide();
+        $("#box").fadeIn();
+        $("#box").fadeIn("slow");
+        $("#box").fadeIn(5000);
+        $('#box').toggle();
     })
 
     var username_error=true;
@@ -33,19 +21,19 @@ $(document).ready(function(){
             $('#usernamevalidation').show();
             $('#usernamevalidation').html('username cannot be empty');
             $('#usernamevalidation').css('color', 'red');
+            $('#usernamevalidation').css('font-weight', 'bold');
             username_error=true;
-            return false;
         }
         else{
             $('#usernamevalidation').hide()
         }
 
-        if(username_val.length<3 || username_val > 10){
+        if(username_val.length < 3 || username_val.length > 10){
             $('#usernamevalidation').show();
             $('#usernamevalidation').html('invalid username');
             $('#usernamevalidation').css('color', 'red');
-            username_error=false;
-            return false;
+            $('#usernamevalidation').css('font-weight', 'bold');
+            username_error=true;
         }
         else{
             $('#usernamevalidation').hide()
@@ -61,6 +49,17 @@ $(document).ready(function(){
         var email_val = $('#email').val();
         var emailregex = new RegExp("^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,8}$/");
         var emailregexo = new RegExp("^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,3}\.[a-zA-Z]{1,3}$");  
+
+        if(email_val.length==""){
+            $('#emailvalidation').show();
+            $('#emailvalidation').html('Email cannot be empty');
+            $('#emailvalidation').css('color','red');
+            $('#emailvalidation').css('font-weight', 'bold');
+            email_validation_error=true;
+        }
+        else{
+            $('#emailvalidation').hide();
+        }
         if(emailregex.test(email_val) || emailregexo.test(email_val)){
             $('#emailvalidation').hide()
             email_validation_error=false;
@@ -69,18 +68,16 @@ $(document).ready(function(){
             $('#emailvalidation').show();
             $('#emailvalidation').html('Invlid Email');
             $('#emailvalidation').css('color', 'red');
+            $('#emailvalidation').css('font-weight', 'bold');
             email_validation_error=true;
-            return false;
         }
     }
 
     $('#submission').click(()=>{
         username_validation()
         email_validation()
-        if(username_error || email_validation_error){
-            return false
-        }
-        else $('#box').removeClass('show')
+        if(username_error || email_validation_error) return false
+        else $('#box').hide();
     })
 
     $('.close').on('click', function(){
@@ -88,5 +85,7 @@ $(document).ready(function(){
         $("#box").fadeOut("slow");
         $("#box").fadeOut(5000);
         $('#box').removeClass('show');
+        $('usernamevalidation').hide();
+        $('emailvalidation').hide();
     });
 });
