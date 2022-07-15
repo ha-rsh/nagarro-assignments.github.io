@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#heading{
+    margin-top: 2rem;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    font-size: 3rem;  
+    border-radius: 15px;  
+}
+
+.hstyle{
+    position: relative;
+    width: 50%;
+    left:25%;
+}

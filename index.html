@@ -6,23 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
     <style>
-        body{
-            background-image: url('https://i.pinimg.com/originals/ac/68/e9/ac68e9ede5b84d83bf172fa518f03461.gif');
-            
-            height: 36rem ;
-            background-repeat: no-repeat;
-            background-position: center;
+        .container::-webkit-scrollbar {
+            margin-left: 2px;
+            width: 10px;               
+        }
+        
+        .container::-webkit-scrollbar-track {
+            background:white;
+            margin-left: 2px;       
+        }
+
+        .container::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 0, 0, 0.547);    
+        border-radius: 20px;       
+        }
+
+        html{
+            background: url('https://cutewallpaper.org/24/animated-computer-gif/desk-motiongraphic-desk-motion-graphics-tutorial-motion-design-animation-motion-design-video.gif') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
             background-size: cover;
         }
+
         h1{
-            color: white;
+            color: hsl(0, 50%, 98%);
             font-family: Arial, Helvetica, sans-serif;
             font-size: 40px;
             text-align: center;
         }
         h1:hover{transform: scale(1.02);}
 
-        h2{ color: white;
+        h2{ color: hsl(0, 39%, 95%);
             font-family: Arial, Helvetica, sans-serif;
             font-size: 30px;
             text-align: center;}
@@ -31,9 +46,10 @@
         
         .box{
             position: relative;
-            color: white;
+            font-size: 25px;
+            color: rgb(19, 18, 18);
             top:5rem;
-            left: -16rem;
+            right: 1rem;
         }
 
         .box-data:hover{
@@ -44,27 +60,41 @@
             display: flex;
             flex: 1;
             width: 60%;
-            
+            height: 65vh;
+            position: relative;
+            left:16rem;
         }
 
         .button{
             display: inline-block;
-            background-color: yellow;
+            background-color: #ffbf00;
             color: blue;
             font-size: 17px;
             font-family: cursive;
             padding: 14px;
             margin-top: 22px;
-            width: 20rem;
+            width: 30rem;
             border-radius: 9px;
+            position: relative;
+            left:4rem;
         }
 
         .button:hover{
-            box-shadow: 0 3px 8px 0 white;background: #063a78; color:white; right:  15px;
+            background: hsl(168, 90%, 25%); color:white; right:  15px; background-color: #0A857A; color: white; cursor: pointer;
+            transform: scale(1.03); transition: all 1s ease;
         }
 
         .container{
-            padding: 42px;
+            background: url('https://gifimage.net/wp-content/uploads/2017/11/gif-background-images-7.gif') center center / cover;
+            position: relative;
+            top:7rem;
+            left: 13rem;
+            padding: 7px;
+            width: 52%;
+            max-height: 41vh;
+            overflow-y: auto;
+            margin-bottom: 22rem;
+            border-radius: 15px 0 0 15px;
         }
         .navbar {
             color: white;
@@ -82,14 +112,12 @@
                 font-weight: bold;
             }
 
-
-
     </style>
 </head>
 <body>
     <div style="display: flex; position: relative;">
-        <img style="height: 6rem; width: 6rem; border-radius: 50%; position: relative;top: 2rem; left: 3rem; border:2px solid white;" src="https://mma.prnewswire.com/media/844192/Nagarro_Logo.jpg?p=twitter" alt="nagarro-logo">
-        <div style="display: block; position: relative; left:32rem">
+        <img style="height: 6rem; width: 6rem; border-radius: 50%; position: relative;top: 2rem; left: 10rem; border:2px solid white;" src="https://mma.prnewswire.com/media/844192/Nagarro_Logo.jpg?p=twitter" alt="nagarro-logo">
+        <div style="display: block; position: relative; left:32rem; top:1rem; background-color: rgba(27, 220, 20, 0.374); padding-left: 8px; padding-right: 8px; border-radius: 15px; transform: scale(1.03); transition:all 1s ease;">
             <h1>Nagarro Training</h1>
             <h2>Assignments</h2>
         </div>
@@ -98,22 +126,31 @@
         <div class="main" style="display: block;">
             <div class="container">
                 <div class="card">
-                    <button class="button" onclick="window.location.href='Assignment-1/pokemon-website.html'">Assignment - 1: pokenmon-website</button>
+                    <button class="button" onclick="window.location.href='Pokemon Website/pokemon-website.html'">Pokenmon Website</button>
                 </div> 
                 <div class="card">
-                    <button class="button" onclick="window.location.href='Assignment-2/portfolio.html'">Assignment - 2: Portfolio</button>
+                    <button class="button" onclick="window.location.href='Portfolio/portfolio.html'">Portfolio</button>
                 </div>
                 <div class="card">
-                    <button class="button" onclick="window.location.href='Assignment-3/pokiweb.html'">Assignment - 3: Pokiweb using javascript</button>
+                    <button class="button" onclick="window.location.href='Pokeweb/pokiweb.html'">Pokeweb (javascript)</button>
                 </div>
                 <div class="card">
-                    <button class="button" onclick="window.location.href='Assignment-4/webd.html'">Assignment - 3: Website using tailwindcss</button>
+                    <button class="button" onclick="window.location.href='Food Blog/webd.html'">Food Blog (tailwindcss)</button>
+                </div>
+                <div class="card">
+                    <button class="button" onclick="window.location.href='To Do App/index.html'">To Do App(Bootstrap + javascript)</button>
+                </div>
+                <div class="card">
+                    <button class="button" onclick="window.location.href='Form Validation/index.html'">Form Validation (jquery + bootstrap)</button>
+                </div>
+                <div class="card">
+                    <button class="button" onclick="window.location.href='Copy To Clipboard/index.html'">Copy To Clipboard (jquery + bootstrap + css)</button>
                 </div>
             </div>
         </div>   
         <div class="box">
-            <div class="box-data"><h3>Name: Harshit Pandey</h3></div>
-            <div class="box-data"><h3>Email: harshitpy123@gmail.com</h3></div>  
+            <div class="box-data"><h3>Harshit Pandey</h3></div>
+            <div class="box-data"><h3>harshitpy123@gmail.com</h3></div>  
         </div>    
     </div>   
 </body>

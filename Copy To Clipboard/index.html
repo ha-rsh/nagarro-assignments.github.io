@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Copy To Clipboard</title>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-blue-200">
+    <div class="hstyle">
+        <h1 class="p-2 bg-amber-500" id="heading">Copy to Clipboard Project</h1>
+    </div>
+    <div class="my-6 flex justify-center">
+        <textarea class="p-3 " name="" id="inputuser" cols="50" rows="10">Hello there</textarea>
+    </div>
+    <div class="flex justify-center m-3">
+        <button class="bg-pink-500 hover:bg-pink-600 text-white rounded w-16 p-2 hover:translate-3 shadow hover:shadow-white hover:scale-110 duration-300 " id="btn" onclick="myfunction()">Copy</button>
+    </div>
+    <div class="my-6 flex justify-center">
+        <textarea class="p-3" name="" id="texttwo" cols="50" rows="10"></textarea>
+    </div>
+</body>
+</html>
