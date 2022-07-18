@@ -1,0 +1,168 @@
+body{
+    /* background: url('Images/bg-image1.jpg') no-repeat center center;
+    background-size: cover; */
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    max-height: 70vh;
+    color: white;
+}
+
+.heading-container{
+    z-index: 2;
+    width: 95rem;
+    position: relative;
+    top:-53.4px;
+    height: 100px;
+    padding-left: 32rem;
+    background: url('Images/bg-image1.jpg') no-repeat center center / cover;
+    position: fixed;
+    font-size: 80px;
+}
+
+
+.cricket-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.cricket-card{
+    position: relative;
+    top:7rem;
+    left:3rem;
+    background-color: white;
+    width: 270px;
+    height: 340px;
+    margin-top: 40px;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding:15px 6px;
+    box-shadow: 2px 2px white;
+}
+
+.cricket-card:not(:last-child){
+    margin-right: 150px;
+}
+
+
+.cricket-card-image{
+    background: url('Images/card-bg.jpg');
+    position: relative;
+    left: 10px;
+    height: 180px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.cricket-card-image:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s;
+}
+
+.cricket-card:hover{
+    background-color: #0A857A;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.cricket-card-image{
+    width: 250px;
+    height: 180px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.cricket-card-image img{
+    border-radius: 50%;
+    position: relative;
+    top:30px;
+    left: 9px;
+    height: 70px;
+}
+
+.cricket-card-image img:not(:first-child){
+    margin-left: 89px;
+}
+
+.status-heading{
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    left:4px;
+    color: black;
+}
+
+.cricket-team{
+    position: relative;
+    left:13px;
+    bottom: 10px;
+    max-width: 10px;
+}
+
+.cricket-team-container{
+    position: relative;
+    padding: 6px;
+    left:2px;
+    display: flex;
+}
+
+.cricket-team-container .cricket-team1{
+    max-width: 10px;
+    font-size: 20px;
+}
+
+.cricket-team-container .cricket-team2{
+    font-size: 20px;
+    margin-left: 10rem;
+    max-width: 10px;
+}
+
+.cricket-team-name1{
+    font-size: 15px;
+}
+
+
+.cricket-team-name2{
+    position: relative;
+    font-size: 15px;
+}
+
+.score{
+    padding: 5px;
+    display: flex;
+    color: black;
+    height: 96px;
+    width: 270px;
+}
+
+.score-team1{
+    position: relative;
+    top:-8px;
+    max-width: 50px;
+}
+
+.score-team2{
+    position: relative;
+    top:-7px;
+    left: 5.4rem;
+    max-width: 50px;
+}
+
+.vslogo{
+    position: relative;
+    left: 3rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.score:hover ,
+.score:hover{
+    color: white;
+}

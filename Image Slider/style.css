@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background: url('Images/bg-image1.jpg') center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container{
+    height: 600px;
+    width: 1000px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slide{
+    transition: 2s;
+}
+
+.slide img{
+    height: 600px;
+    width: 1000px;
+}
+
+.image-slider{
+    display: flex;
+}
+
+.image-slider input{
+    display: none;
+}
+
+.manual{
+    border: 2px solid #f3eae8;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 1s;
+    cursor: pointer;
+    height: 1px;
+    width: 40px;
+}
+
+.manual-nav{
+    position: relative;
+    width: 1000px;
+    top:-90px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual:not(:last-child){
+    margin-right: 30px;
+}
+
+.manual:hover{
+    background: #f3eae8;
+}
+
+#btn1:checked ~ #first{
+    margin-left: 0;
+}
+
+#btn2:checked ~ #first{
+    margin-left: -1000px;
+}
+
+#btn3:checked ~ #first{ 
+    margin-left: -2000px;
+}
+
+#btn4:checked ~ #first{
+    margin-left: -3000px;
+}
+
+.auto-nav{
+    position:absolute;
+    display: flex;
+    top:575px;
+    width: 1000px;
+    justify-content: center;
+}
+
+.auto-nav div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+    height: 1px;
+    width: 40px;
+}
+
+.auto-nav div:not(:last-child){
+    margin-right: 30px;
+}
+
+
+#btn1:checked ~ .auto-nav .auto1{
+    background: white;
+}
+
+#btn2:checked ~ .auto-nav .auto2{
+    background: white;
+}
+
+#btn3:checked ~ .auto-nav .auto3{
+    background: white;
+}
+
+#btn4:checked ~ .auto-nav .auto4{
+    background: white;
+}

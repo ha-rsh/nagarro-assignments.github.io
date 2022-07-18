@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Slider</title>
+</head>
+<body>
+    <div class="image-container">
+        <div class="image-slider">
+            <input class="abtn" type="radio" name="check-btn" id="btn1">
+            <input class="abtn" type="radio" name="check-btn" id="btn2">
+            <input class="abtn" type="radio" name="check-btn" id="btn3">
+            <input class="abtn" type="radio" name="check-btn" id="btn4">
+
+            <div class="slide" id="first">
+                <img src="Images/image1.jpg" alt="street rail">
+            </div>
+            <div class="slide">
+                <img src="Images/image2.jpg" alt="vacation site">
+            </div>
+            <div class="slide">
+                <img src="Images/image3.jpg" alt="landscape">
+            </div>
+            <div class="slide">
+                <img src="Images/image4.jpg" alt="elephant in woods">
+            </div>
+
+            <div class="auto-nav">
+                <div class="auto1"></div>
+                <div class="auto2"></div>
+                <div class="auto3"></div>
+                <div class="auto4"></div>
+            </div>
+        </div>
+        <div class="manual-nav">
+            <label for="btn1" class="manual"></label>
+            <label for="btn2" class="manual"></label>
+            <label for="btn3" class="manual"></label>
+            <label for="btn4" class="manual"></label>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
