@@ -8,7 +8,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start":"vite"
+    "start": "vite"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,9 @@
   "homepage": "https://github.com/ha-rsh/nagarro-assignments.github.io#readme",
   "description": "",
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "superheroes": "^3.0.0",
     "vite": "^2.9.14"
   }
 }
