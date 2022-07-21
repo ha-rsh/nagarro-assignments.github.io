@@ -5,14 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weight converter</title>
+    <style>
+      h1{
+        position: relative;
+        padding: 5px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 3px;
+        color: white;
+
+      }
+      #main-box:hover{
+        transform: scale(1.03);
+        transition: 1s;
+        box-shadow: 4px;
+      }
+
+    </style>
 </head>
-<body>
-    <div class="card p-3 mb-2 rounded" style="width: 18rem;">
+<body style="text-align: center;background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,76,0.5497549361541492) 35%, rgba(0,212,255,1) 100%);">
+    <h1>Weight Converter</h1>
+    <div id="main-box" class="card p-3 mb-2 rounded" style="position: relative;left:39em; top: 3rem; width: 18rem; background-color: rgb(255, 244, 240);">
         <img src="https://saveatrain-12e85.kxcdn.com/blog/wp-content/uploads/2019/09/units-converter.jpg" class="rounded w-44 card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Gram to Kilogram</h5>
-          <input id="input" class="m-3 w-48 rounded" type="text" placeholder="weight in gram"></input>
-            <h3 style="font-size:20px" id="converted"></h3>
+          <h5 class="card-title" style="background-color:black;color: white; padding: 5px;">Gram to Kilogram</h5>
+          <input style="position: relative; left:-2rem; width: 250px;" id="input" class="m-3 w-48 rounded" type="text" placeholder="weight in gram"></input>
+            <h3 style="font-size:20px; padding: 5px; margin-bottom: 10px;" id="converted"></h3>
           <button id="btn" type="button" class="btn btn-outline-success">Convert</button>
         </div>
       </div>
