@@ -49,10 +49,11 @@ body{
 
 .manual-nav{
     position: absolute;
-    width: 1000px;
-    top:-90px;
+    width:1000px;
+    margin-top: -90px;
     display: flex;
     justify-content: center;
+
 }
 
 .manual:not(:last-child){
