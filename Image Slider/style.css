@@ -48,7 +48,7 @@ body{
 }
 
 .manual-nav{
-    position: relative;
+    position: absolute;
     width: 1000px;
     top:-90px;
     display: flex;
