@@ -1,0 +1,46 @@
+<style>
+  * {box-sizing: border-box;}
+  
+  body{ background: rgb(0,255,183); background: linear-gradient(90deg, rgba(0,255,183,1) 0%, rgba(207,255,182,0.981127485173757) 100%);}
+
+  h1{display: flex;justify-content: center;padding: 8px; margin-bottom: 8px; }
+  
+  .input-container {display: flex; justify-content: center; position: relative; top: 20px; left:120px; width: 80%; margin-bottom: 15px; }
+  
+  .icon {padding: 10px; background: dodgerblue; color: white; min-width: 50px; text-align: center; }
+  
+  .input-field {width: 100%; padding: 10px; outline: none;}
+  
+  .input-field:focus {border: 2px solid dodgerblue;}
+  
+  .btn {background-color: dodgerblue; position: relative; top: 20px; left: 120px; color: white; padding: 15px 20px; border: none;
+    cursor: pointer; width: 80%; opacity: 0.9; }
+  
+  .btn:hover {opacity: 1;}
+
+</style>
+
+<link rel="stylesheet" href="/style.css">
+
+<form action="/register" method="POST">
+    <h1>Registeration Form</h1>
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+      <input class="input-field" id="name" type="text" placeholder="Username" name="name" required>
+    </div>
+  
+    <div class="input-container">
+      <i class="fa fa-envelope icon"></i>
+      <input class="input-field" id="email" type="email" placeholder="Email" name="email" required>
+    </div>
+  
+    <div class="input-container">
+      <i class="fa fa-key icon"></i>
+      <input class="input-field" id="password" type="password" placeholder="Password" name="password" required>
+    </div>
+  
+    <button type="submit" class="btn">Register</button>
+  </form>
+
+  <a href="/login"><button type="submit" class="btn">Login</button></a>
+  <script src="https://kit.fontawesome.com/9edb0442b2.js" crossorigin="anonymous"></script>

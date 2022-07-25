@@ -6,111 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
     <style>
-        .container::-webkit-scrollbar {
-            margin-left: 2px;
-            width: 10px;               
-        }
+        .container::-webkit-scrollbar {margin-left: 2px; width: 10px;}
         
-        .container::-webkit-scrollbar-track {
-            background:white;
-            margin-left: 2px;       
-        }
+        .container::-webkit-scrollbar-track {background:white; margin-left: 2px;}
 
-        .container::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 0, 0, 0.547);    
-        border-radius: 20px;       
-        }
+        .container::-webkit-scrollbar-thumb {background-color: rgba(255, 0, 0, 0.547); border-radius: 20px;}
 
-        html{
-            background: url('https://cutewallpaper.org/24/animated-computer-gif/desk-motiongraphic-desk-motion-graphics-tutorial-motion-design-animation-motion-design-video.gif') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
+        html{background: url('https://cutewallpaper.org/24/animated-computer-gif/desk-motiongraphic-desk-motion-graphics-tutorial-motion-design-animation-motion-design-video.gif') no-repeat center center fixed;
+            -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-        h1{
-            color: hsl(0, 50%, 98%);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 40px;
-            text-align: center;
-        }
+        h1{color: hsl(0, 50%, 98%); font-family: Arial, Helvetica, sans-serif; font-size: 40px; text-align: center; }
+
         h1:hover{transform: scale(1.02);}
 
-        h2{ color: hsl(0, 39%, 95%);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 30px;
-            text-align: center;}
+        h2{ color: hsl(0, 39%, 95%); font-family: Arial, Helvetica, sans-serif; font-size: 30px; text-align: center;}
         
         h2:hover{transform: scale(1.1);}
         
-        .box{
-            position: relative;
-            font-size: 25px;
-            color: rgb(19, 18, 18);
-            top:5rem;
-            right: 1rem;
-        }
+        .box{position: relative; font-size: 25px; color: rgb(19, 18, 18); top:5rem; right: 1rem;}
 
-        .box-data:hover{
-            transform: scale(1.1)
-        }
+        .box-data:hover{transform: scale(1.1)}
 
-        .main{
-            display: flex;
-            flex: 1;
-            width: 60%;
-            height: 65vh;
-            position: relative;
-            left:16rem;
-        }
+        .main{display: flex; flex: 1; width: 60%; height: 65vh; position: relative; left:16rem;}
 
-        .button{
-            display: inline-block;
-            background-color: #ffbf00;
-            color: blue;
-            font-size: 17px;
-            font-family: cursive;
-            padding: 14px;
-            margin-top: 22px;
-            width: 30rem;
-            border-radius: 9px;
-            position: relative;
-            left:4rem;
-        }
+        .button{display: inline-block; background-color: #ffbf00; color: blue; font-size: 17px; font-family: cursive; padding: 14px;
+            margin-top: 22px; width: 30rem; border-radius: 9px; position: relative; left:4rem;}
 
-        .button:hover{
-            background: hsl(168, 90%, 25%); color:white; right:  15px; background-color: #0A857A; color: white; cursor: pointer;
-            transform: scale(1.03); transition: all 1s ease;
-        }
+        .button:hover{background: hsl(168, 90%, 25%); color:white; right:  15px; background-color: #0A857A; color: white; cursor: pointer;
+            transform: scale(1.03); transition: all 1s ease;}
 
-        .container{
-            background: url('https://gifimage.net/wp-content/uploads/2017/11/gif-background-images-7.gif') center center / cover;
-            position: relative;
-            top:7rem;
-            left: 13rem;
-            padding: 7px;
-            width: 52%;
-            max-height: 41vh;
-            overflow-y: auto;
-            margin-bottom: 22rem;
-            border-radius: 15px 0 0 15px;
-        }
-        .navbar {
-            color: white;
-            position: fixed;
-            padding: 30px 0;
-            right: 0;
-            left: 0;
-            background-color: transparent;
-        }
+        .container{background: url('https://gifimage.net/wp-content/uploads/2017/11/gif-background-images-7.gif') center center / cover;
+            position: relative; top:7rem; left: 13rem; padding: 7px; width: 52%; max-height: 41vh; overflow-y: auto; margin-bottom: 22rem;
+            border-radius: 15px 0 0 15px;}
 
-        li {
-                display: inline;
-                padding: 30px;
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
+        .navbar {color: white; position: fixed; padding: 30px 0; right: 0; left: 0; background-color: transparent;}
+
+        li {display: inline; padding: 30px; font-size: 1.2rem; font-weight: bold;}
 
     </style>
 </head>
@@ -159,10 +90,19 @@
                     <button class="button" onclick="window.location.href='POP UP PROJECT/index.html'">Pop Up (jquery + bootstrap + css)</button>
                 </div>
                 <div class="card">
+                    <button class="button" onclick="window.location.href='#'">Password Auth</button>
+                </div>
+                <div class="card">
+                    <button class="button" onclick="window.location.href='Calculator/index.html'">Calculator (javascript + css)</button>
+                </div>
+                <div class="card">
                     <button class="button" onclick="window.location.href='Image Slider/index.html'">Image Slider (javascript + css)</button>
                 </div>
                 <div class="card">
                     <button class="button" onclick="window.location.href='weight converter/index.html'">Weight Converter (javascript + Bootstrap)</button>
+                </div>
+                <div class="card">
+                    <button class="button" onclick="window.location.href='Background Theme/index.html'">Background Theme (javascript + css)</button>
                 </div>
             </div>
         </div>   
