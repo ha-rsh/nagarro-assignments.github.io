@@ -58,11 +58,11 @@ class Calculator{
                 computation = prev - current;
                 break;
             
-            case "*":
+            case "x":
                 computation = prev * current;
                 break;
             
-            case "x":
+            case "÷":
                 computation = prev / current;
                 break;
             
