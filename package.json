@@ -25,6 +25,7 @@
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
     "superheroes": "^3.0.0",
+    "vanilla-tilt": "^1.7.2",
     "vite": "^2.9.14"
   }
 }
