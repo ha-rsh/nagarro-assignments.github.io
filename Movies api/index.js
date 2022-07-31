@@ -11,7 +11,7 @@ $(document).ready(() => {
   
   function getMovies(searchText){
     $("#containerbody").hide()
-    fetch('http://www.omdbapi.com/?apikey='+apikey+"&t="+searchText)
+    fetch(`https://www.omdbapi.com/?t=${searchText}&apikey=${apikey}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
