@@ -11,11 +11,10 @@ $(document).ready(() => {
   
   function getMovies(searchText){
     $("#containerbody").hide()
-    fetch(`https://www.omdbapi.com/?t=${searchText}&apikey=${apikey}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        let movie = data;
+    axios.get(`https://www.omdbapi.com/?t=${searchText}&apikey=${apikey}`)
+      .then((response) => {
+        console.log(response);
+        let movie = response.data;
         let output =`
         <div class="row">
           <div class="col-md-3">
