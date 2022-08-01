@@ -1,7 +1,7 @@
 let fact = document.querySelector('#fact');
 let factText = document.querySelector('#factText');
 let numberInput = document.querySelector('#numberInput');
-numberInput.addEventListener('input', getFactAjax);
+numberInput.addEventListener('input', getFactFetch);
 function getFactAjax(){
     let number = numberInput.value;
     console.log(number)

@@ -8,20 +8,20 @@
     <title>SMTP email</title>
 </head>
 <body style="background:linear-gradient(90deg, hsla(305, 75%, 83%, 1) 0%, hsla(196, 83%, 84%, 1) 52%, hsla(64, 41%, 92%, 1) 100%);">
-    <h1 id="heading" class="text-center p-5">SMTP Email </h1>
-    <div class="container p-5 text-white" style="height: 30rem;background:url('https://images.pexels.com/photos/8715136/pexels-photo-8715136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center / cover">
+    <h1 id="heading" class="text-center p-5" style="font-weight: bold;">SMTP Email </h1>
+    <div class="container p-5 text-black" style="border-radius: 25px; font-weight: bold; font-size: 20px; height: 30rem;background:url('https://static-cse.canva.com/blob/572026/removingbackgroundimages_Unsplash.jpeg') no-repeat center center / cover">
         <form onsubmit="sendMail(event)">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input style="background:rgba(255, 255, 255, 0.2); color: white;" type="email" class="form-control" id="email">
+                <input style="background:rgba(255, 255, 255, 0.2); color: black;" type="email" class="form-control" id="email">
             </div>
             <div class="mb-3">
                 <label for="subject" class="form-label">Subject</label>
-                <input style="background:rgba(255, 255, 255, 0.2); color: white;" type="subject" class="form-control" id="subject">
+                <input style="background:rgba(255, 255, 255, 0.2); color: black;" type="subject" class="form-control" id="subject">
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea style="background:rgba(255, 255, 255, 0.2); color: white;" class="form-control" id="message" rows="3"></textarea>
+                <textarea style="background:rgba(255, 255, 255, 0.2); color: black;" class="form-control" id="message" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-dark">Submit</button>
         </form>
