@@ -62,7 +62,9 @@ xhr.onload = () =>{
 
             playscore1 = document.createElement('h2');
             playscore1.className = "score-team1";
-            playscore1.innerText = `${value.t1s}`;
+            if(value.t1s == "") teaam1score = "No Data"
+            else teaam1score = value.t1s;
+            playscore1.innerText = `${teaam1score}`;
             scorebox.appendChild(playscore1);
 
             fightlogo = document.createElement('img');
@@ -72,7 +74,9 @@ xhr.onload = () =>{
             
             playscore2 = document.createElement('h2');
             playscore2.className = "score-team2";
-            playscore2.innerText = `${value.t2s}`;
+            if(value.t2s == "") teaam2score = "No Data"
+            else teaam2score = value.t2s;
+            playscore2.innerText = `${teaam2score}`;
             scorebox.appendChild(playscore2);
         });
     }
