@@ -1,5 +1,7 @@
 *{padding: 0; margin: 0;}
 
+.main-container{overflow: hidden;}
+
 .left-column{height: 100vh; width: 55%; float: left;}
 
 .left-column img {width: 100%; height: 100%;}
@@ -31,11 +33,11 @@
 
 .btn-apple{position: relative; top: 10px;}
   
-hr {position: relative; top:17px; margin: 25px 0; background-color: white;}
+hr {position: relative; top:2px; margin: 25px 0; background-color: white;}
 
-.or {position: absolute; top:43.5%; left: 50%; z-index: 2; padding: 0 10px; transform: translate(-50%, -50%); background-color: black; border-radius: 50%;}
+.or {position: relative; top:2rem; left: 43%; z-index: 2; padding: 0 10px; transform: translate(-50%, -50%); background-color: black; border-radius: 50%;}
   
-#btn-signup{position: relative; top: 25px; background-color: #179cf5; color: #fff; outline: none; box-shadow: none; border: none; display: flex;
+#btn-signup{position: relative; top: 22px; background-color: #179cf5; color: #fff; outline: none; box-shadow: none; border: none; display: flex;
      justify-content: center; align-items: center;}
 
 #btn-signup:hover{background-color: #388ac0; color: #fff;}
@@ -67,46 +69,45 @@ footer span {display: block; font-size: 0.75rem; padding: 0 0 10px;}
 footer span i{color: red; padding-left: 2px; padding-right: 2px;}
 
 @media (min-width: 768px) {
-    .right-column {
-      padding: 2rem;
-    }
-    .footer-container {
-      height: auto;
-    } 
 
-    .left-column img {
-      width: 100%;
-    }
-    .main-container {
-      height: 100vh;
-    }
-    .main-heading{
-      overflow-wrap: break-word;
-      }
+    .right-column {padding: 2rem;}
+
+    .footer-container {height: auto;} 
+
+    .left-column img {width: 100%; }
+
+    .main-container {height: 100vh;}
+
+    .main-heading{overflow-wrap: break-word;}
+
+    .form-container{height: 10px;}
   }
 
 @media (max-width: 550px) {
-    .main-heading{
-        font-size: 3rem;
+    .left-column{width: 100%; height: 20%;}
+
+    .right-column{width: 100%; height: 30%;}
+
+    .main-heading{font-size: 3rem;}
+
+    .form-container{
+        height: 490px;
     }
-    .sub-heading{
-      font-size: 1.5rem;
-    }
+    
+    .sub-heading{font-size: 1.5rem;}
 }
 
 @media (max-width: 425px) {
-    .left-column{
-        width: 100%;
-        height: 40%;
+    .form-container{
+        height: 390px;
     }
 
-    .right-column{
-        width: 100%;
-        height: 60%;
-    }
+    .btn, hr, #btn-signin{width: auto;}
+
     .main-heading{
         font-size: 2rem;
     }
+
     .sub-heading{
       font-size: 1rem;
     }
