@@ -5,7 +5,14 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
     width: 100%;
+    background-color: #141414;
 }
+
+body::-webkit-scrollbar {margin-left: 2px; width: 4px;}
+        
+body::-webkit-scrollbar-track {margin-left: 2px;}
+
+body::-webkit-scrollbar-thumb {background-color: rgb(102, 97, 97);border-radius: 20px;}
 
 .main-container{background-color:#000000;}
 
@@ -121,3 +128,320 @@ nav{display: flex;
 }
 .carousel-control-prev span i:hover,
 .carousel-control-next span i:hover {color:  #ff0000;}
+
+#mid-container{
+    background-color: #141414;
+    color: #fff;
+    text-align: center;
+    padding-top: 6rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1px;
+}
+
+.heading{margin: 0; font-size: 2.5rem; font-family: Montserrat;}
+
+.heading:hover{color: #fff;}
+
+.product-container{
+    margin: 5rem 0;
+    padding: 0 3rem;
+    display: flex;
+    overflow: hidden;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.sale{
+    background-color: #fbc50a;
+    color: #000;
+    position: absolute;
+    top: 2%;
+    padding: .01rem .35rem;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.sale span{font-size: 12px;}
+
+.sale span i span{margin-left: 3px;}
+
+.card{
+    background-color: #dbdbdb;
+    color: #000;
+    position: relative;
+    border-radius: 10px;
+    width: 23%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.75rem;
+}
+
+.item-image img{
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: block;
+}
+
+.item-image .first{
+    position: relative;
+    opacity: 1;
+}
+
+.item-image:hover .second{
+    position: relative;
+    opacity: 1;
+}
+
+.item-image:hover .first{
+    position: absolute;
+    opacity: 0;
+}
+
+.item-details{
+    background-color: #fff;
+    margin: 0 .75rem .75rem;
+    border-radius: 10px;
+    text-align: left;
+    padding: 1rem;
+}
+
+.item-name{
+    margin: 0;
+    font-size: 1rem;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.item-details hr{
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.item-price{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ff0000;
+    display: block;
+    margin: 0;
+}
+
+.item-price .non-discount-price{
+    color: #666;
+    text-decoration: line-through;
+    margin-left: .3rem;
+    font-weight: 300;
+}
+
+.saving{
+    color: #666;
+    font-size: .7rem;
+    font-weight: 300;
+    margin: 7px 0;
+    display: block;
+}
+
+.add-to-cart{
+    display: block;
+    width: 100%;
+    background-color: #fbc50a;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: .35rem 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#mid-container2{
+    background-color: #141414;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+.sale-timer-container{
+    background-color: #fbc50a;
+    color: #000;
+    width: max-content;
+    margin: 1rem auto .75rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.sale-timer{
+    margin-left: 3rem;
+}
+
+.sale-timer .milisecond{
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 0.2rem 0.4rem;
+    font-weight: 600;
+    min-width: 40px;
+    display: inline-block;
+}
+
+.small-text{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+#subcontainer{
+    display: flex;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.sub-card{
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 30%) 1px 1px 5px 1px;
+    width: 240px;
+    height:530px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.video-wrapper{
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 240px;
+    height: 397.992px;
+    background-color: #000;
+}
+
+.video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper{
+    transform: translate3d(0px, 0px, 0px);
+    position: absolute;
+    bottom: -22px;
+    width: 44px;
+    height: 44px;
+    box-shadow: rgb(0 0 0 / 25%) 1px 1px 2px 0px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 100;
+}
+
+.image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.sub-data{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100% - 397.992px);
+}
+
+.sub-data-title{
+    margin-top: 30px;
+    width: 98%;
+}
+
+.title-para{
+    display: -webkit-box;
+    height: auto;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: normal;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 0px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.title-subpara{
+    display: -webkit-box;
+    height: auto;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: normal;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 0px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.price-data{
+    letter-spacing: -0.4px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.bottom-price-content{
+    position: relative;
+    bottom: 14px;
+}
+
+#btn-back-to-top {
+    visibility: hidden;
+    BACKGROUND: rgb(255 255 255 / 90%);
+    position: fixed;
+    bottom: 14%;
+    box-shadow: 0 0 0px 1px #909090;
+    width: 40px;
+    right: 2%;
+    JUSTIFY-CONTENT: CENTER;
+    Z-INDEX: 9;
+    height: 3rem;
+    border-radius: 0;
+}
+
+button img{
+    position: relative;
+    height: 1.5rem;
+    right: 9px;
+}
