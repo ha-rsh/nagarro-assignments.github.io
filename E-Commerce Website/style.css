@@ -1,0 +1,123 @@
+*{padding: 0; margin: 0;}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.main-container{background-color:#000000;}
+
+a{text-decoration: none; color: white;}
+
+.nav-link a:hover{color: #fff;text-decoration: underline;}
+
+nav{display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    background-color: #000;
+}
+
+.nav-logo{width:20%}
+
+.nav-logo img{width: 30%;}
+
+.nav-links{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link{
+    padding: 1.5rem 0;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.content{
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 220px;
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid grey;
+    z-index: 2;
+}
+
+.dropdown:hover .content{
+    display: block;}
+
+.content ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content ul li {
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+  }
+
+.content a:hover {
+    text-decoration: none;
+    color: #bbb;
+  }
+
+.nav-right{
+    width: 25%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav-right span {
+    margin: 0 0.75rem;
+    font-size: 1.1rem;
+    position: relative;
+  }
+
+.nav-right span a i:hover{color: white;}
+  
+.nav-right input {
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    padding-left: 2rem;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+.search-icon {
+    color: #777;
+    position: absolute;
+      top: 50%;
+      left: .5rem;
+      transform: translateY(-50%);
+  }
+
+.carousel-control-prev span i,
+.carousel-control-next span i {
+    color: #ff000063;
+    font-size: 60px;
+}
+
+.carousel-control-prev span{
+    position: relative;
+    left: -5rem;
+}
+
+.carousel-control-next span{
+    position: relative;
+    left: 5rem;
+}
+.carousel-control-prev span i:hover,
+.carousel-control-next span i:hover {color:  #ff0000;}

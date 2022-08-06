@@ -24,13 +24,13 @@
         body::after{content: ''; position: absolute; top:0; left:0; width: 100%; height: 100%; background: linear-gradient(#2196f3,#e91e63);
             clip-path: circle(20% at 10% 10%);}
 
-        .main-heading{margin-left:25%; text-align: center; width: 50%; color: white; padding: 10px;}
+        .main-heading{display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto; width: 100%; color: white; padding: 10px;}
 
         .main-heading h2{ margin-top: 15px;}
 
-        .container{position: relative; display: flex; justify-content: center; align-items: center; max-width: 1200px; flex-wrap: wrap; z-index: 1;}
+        .container{position: relative; display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: auto; flex-wrap: wrap; z-index: 1;}
 
-        .container .card{position: relative; left: 13%; width: 1200px; height: 450px; margin: 30px; box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); border-radius: 15px;
+        .container .card{ width: 1200px; height: 450px; margin: 30px; box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); border-radius: 15px;
             background: rgba(255, 255, 255, 0.1); overflow: hidden; border-top: 1px solid rgba(255, 255, 255, 0.5);border-left: 1px solid rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(5px);}
 
@@ -53,15 +53,40 @@
 
         .content-data:hover span{right: 30px;}
 
+        @media screen and (max-width:866px){
+            body::after{display: none;}
+        }
+
+        @media screen and (max-width:426px){
+            .main-heading span h2{font-size: 15px;}
+
+            .container .card .content img{height: 200px; position: absolute;top: 10rem; right: 30px;}
+
+            .container .card .content h2{font-size: 60px; position: absolute; top: 3px; left: 2px;}
+
+            .content-data button{font-size: 8px;}
+
+            .content-data span{display: none;}
+
+            body::before{height: 50%; position: absolute; top:24rem;}
+
+        }
+
+        @media screen and (min-width:427px) and (max-width:580px){
+            .content-data button{font-size: 13px;}
+
+            .main-heading span h2{font-size: 20px;}
+        }
+
     </style>
 </head>
 <body>
     <header>
         <div class="main-heading">
-            <h1>Nagarro Assignments</h1>
-            <h2>Harshit Pandey</h2>
-            <h2>harshitpy123@gmail.com</h2>
-            <h2>Bharati Vidyapeeth's College Of Engineering</h2>
+            <span><h1>Nagarro Assignments</h1></span>
+            <span><h2>Harshit Pandey</h2></span>
+            <span><h2>harshitpy123@gmail.com</h2></span>
+            <span><h2>Bharati Vidyapeeth's College Of Engineering</h2></span>
         </div>
     </header>
     <div class="container">
