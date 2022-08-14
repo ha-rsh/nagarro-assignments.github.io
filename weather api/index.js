@@ -3,6 +3,7 @@ const https = require("http");
 
 const apikey = "4b127f157aa5951c78953e9d55ed0e92";
 const app = express()
+port = process.env.PORT || 3000;
 
 const city="delhi";
 const countrycode = "IN";
@@ -11,7 +12,6 @@ const statecode ="HR";
 const loc1 =`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
 const loc2 = `http://api.openweathermap.org/data/2.5/weather?q=${city},${countrycode}&appid=${apikey}`;
 const loc3 = `https://api.openweathermap.org/data/2.5/weather?q=${city},${statecode},${countrycode}&appid=${apikey}`
-
 
 // FIRST WAY
 https.createServer((request, response) =>{
@@ -32,7 +32,7 @@ https.createServer((request, response) =>{
                     </html>`)
         response.send();
     });
-}).listen(3000, ()=> console.log("server is running on port 3000"));
+}).listen(port, ()=> console.log("server is running on port 3000"));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -65,6 +65,6 @@ app.get("/", (req, res) =>{
             })
         }
     })
-}).listen(3000, ()=>{
+}).listen(port, ()=>{
     console.log("server is running on port 3000")
 })
