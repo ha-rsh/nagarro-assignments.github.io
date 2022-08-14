@@ -35,10 +35,45 @@ section{min-height: 100vh; padding:1rem;}
 
 .dynamic-text li span{position: relative;}
 
-.dynamic-text li span::after{content: ""; position: absolute; left: 0; height: 90%; width: 100%; background: black; border-left: 2px solid #fc6d6d;
+.dynamic-text li span::after{content: ""; position: absolute; left: 0; height: 100%; width: 100%; background: black; border-left: 2px solid #fc6d6d;
     animation: typing 2s steps(11) infinite;}
 
 @keyframes typing {100%{left:100%; margin: 0 -36px 0 37px;}}
+
+@media screen and (max-width:1267px) {
+    .wrapper .static-text{font-size:30px}
+    .wrapper .dynamic-text li{ font-size: 30px;}
+    .dynamic-text li:not(:first-child){margin-top: 27px;}
+    @keyframes slide { 100%{ top: -212px;}}
+    .effect-2 > *{display: none;}
+    
+}
+
+@media screen and (max-width:531px) {
+    .wrapper .static-text{font-size:20px}
+    .wrapper .dynamic-text li{ font-size: 20px;}
+    @keyframes slide { 100%{ top: -170px;}}
+    .dynamic-text li:first-child{margin-top: -2px;}
+    .dynamic-text li:not(:first-child){margin-top: 27px;}
+  
+
+}
+@media screen and (max-width:421px) {
+    .wrapper .static-text{font-size:15px}
+    .wrapper .dynamic-text li span{ font-size: 15px;}
+    @keyframes slide { 100%{ top: -180px;}}
+    .dynamic-text li:first-child{margin-top: -4px;}
+    .dynamic-text li:not(:first-child){margin-top: 30px;}
+    .home #sfirst, #ssecond{font-size: 4rem;}
+}
+
+@media screen and (max-width:351px) {
+    .home #sfirst, #ssecond{font-size: 3rem;}
+}
+
+@media screen and (max-width:533px) {   
+    .effect-wrap{display: none;}
+}
 
 .btn{padding:.7rem 3rem; background:#333; color:#fff; cursor: pointer; margin-top: 1rem; font-size: 2rem; border-radius: 5rem;}
 
@@ -50,7 +85,7 @@ section{min-height: 100vh; padding:1rem;}
 
 .heading span{color:var(--yellow);}
 
-header{position: fixed;top:0; left:0; z-index: 1000; height:100%; width:35rem; background:rgba(255, 255, 255, 0.1); display: flex; align-items: center;
+header{position: fixed;top:0; left:0; z-index: 1000; height:100%; width:35rem; background:black; display: flex; align-items: center;
     justify-content: center; flex-flow: column; text-align: center;}
 
 header .user{z-index: 10;}
@@ -117,12 +152,12 @@ header .navbar ul li a:hover{
     color:#fff;
 }
 
-.home h1{
+.home #sfirst{
     font-size:5rem;
     color:#fff;
 }
 
-.home h1 span{
+.home h1 #ssecond{
     color:var(--yellow);
 }
 
@@ -177,7 +212,7 @@ header .navbar ul li a:hover{
     border-top: 30px solid transparent;
     border-left: 30px solid #06d79c;
     left: 35%;
-    top:20%;
+    top:15%;
     animation: spin 15s linear infinite;
 }
 
@@ -291,6 +326,11 @@ header .navbar ul li a:hover{
     padding-left: 3rem;
 }
 
+@media screen and (max-width:321px) {
+    .education .box-container{width: auto;}
+    
+}
+
 .education .box-container .box{
     width:35rem;
     height: 20rem;
@@ -330,6 +370,10 @@ header .navbar ul li a:hover{
     height: 630px;
     width: 110rem;
     overflow-y: scroll;
+}
+
+@media screen and (max-width:321px) {
+    .card-container{width: auto;}    
 }
 
 .card-container .card{
@@ -485,10 +529,6 @@ header .navbar ul li a:hover{
     }
  
     .education .box-container .box{
-        width:100%;
-    }
-
-    .projects .box-container .box{
         width:100%;
     }
 
