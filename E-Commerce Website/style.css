@@ -42,7 +42,13 @@ nav{display: flex;
     padding: 1.5rem 0;
 }
 
-.dropdown{
+.shop-content ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown, .shop-dropdown{
     position: relative;
     display: inline-block;
 }
@@ -51,15 +57,69 @@ nav{display: flex;
     display: none;
     position: absolute;
     background-color: #000;
-    min-width: 220px;
     padding: 1rem 1.5rem;
     margin-top: 1.5rem;
     border: 1px solid grey;
     z-index: 2;
 }
 
+.shop-content{
+    display: none;
+    position: absolute;
+    left: -34.5rem;
+    background-color: #000;
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid grey;
+    z-index: 2;
+}
+
+.shop-content{
+    float: left;
+}
+
+.content{
+    min-width: 220px;
+}
+
+.shop-content{
+    width: 96rem;
+    height: 36rem;
+    
+}
+
 .dropdown:hover .content{
-    display: block;}
+    display: block;
+}
+
+.shop-dropdown:hover .shop-content{
+    display: block;
+}
+
+.shop-dropdown:hover .shop-content ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-between; */
+    overflow: hidden;
+    height: auto;
+    margin-left: 0;
+}
+
+.shop-content ul li{
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.shop-content ul li a img{
+    height: 160px;
+}
+
+.shop-content img:hover{
+    transition: all 0.5s;
+    opacity: 0.7;
+}
+
 
 .content ul{
   list-style: none;
