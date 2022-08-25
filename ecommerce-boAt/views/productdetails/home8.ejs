@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.png">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <title>boAt</title>
+</head>
+<body style="background-color: #fff;">
+    <%- include ("../partials/nav"); %>
+    <div class="description-body">
+        <div class="page-path"><a style="text-decoration: none;" href="/dashboard"><span>Home / </span></a>boAt Wave Connect Bluetooth Calling Smartwatch with Alexa built-in, 1.69” HD display, 100+ Watch Faces, 60+ Sports Modes</div>
+        <div class="row">
+            <div class="product-thumnail primary-column">
+                <div class="column">
+                    <img src="../Images/productDetais/Home/ItemID-8/product1.1.webp" onmouseover="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="../Images/productDetais/Home/ItemID-8/product1.2.webp" onmouseover="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="../Images/productDetais/Home/ItemID-8/product1.3.webp" onmouseover="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="../Images/productDetais/Home/ItemID-8/product1.4.webp" onmouseover="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="../Images/productDetais/Home/ItemID-8/product1.5.webp" onmouseover="myFunction(this);">
+                </div>
+                <div class="change-container">
+                    <img id="expandedImg" src="../Images/productDetais/Home/ItemID-8/product1.1.webp" style="width:100%">
+                </div>
+            </div>
+            <div class="secondary-column">
+                <h1>boAt Wave Connect Bluetooth Calling Smartwatch with Alexa built-in, 1.69” HD display, 100+ Watch Faces, 60+ Sports Modes</h1>
+                <div class="secondary-column-bottom">
+                    <div class="bottom-left">
+                        <h3>SMART WATCHES</h3>
+                        <hr/>
+                        <h3 class="color-text">Color: <span >Charcoal Black</span></h3>
+                        <div class="item-color-available">
+                            <img class="itemcolor1" src="../Images/productDetais/Home/ItemID-8/productsub1.webp">
+                            <img class="itemcolor2" src="../Images/productDetais/Home/ItemID-8/productsub2.webp">
+                        </div>
+                        <hr/>
+                        <div class="emi-details">
+                            <h5>3 interest-free EMIs of ₹ 499.33 with <img src="../Images/productDetais/Home/ItemID-8/axioslogo.svg"><img src="../Images/productDetais/Home/ItemID-8/info.svg"></h5>
+                            <hr/>
+                            <h5>PayLater and get upto ₹500 off with <img src="../Images/productDetais/Home/ItemID-8/zestlogo.svg"></h5>
+                        </div>
+                    </div>
+                    <div class="bottom-right">
+                        <div class="cart-card">
+                            <div class="cart-card-heading"><h2>₹ 1,498 <span>₹ 2,990</span></h2></div>
+                            <div class="saving-tax">
+                                <h3>You Save: ₹ 1492 (50%)</h3>
+                                <h4>Inclusive of all taxes</h4>
+                            </div>
+                            <div class="stock-check">
+                                <h3>In Stock</h3>
+                                <h5>Currently in 270 carts</h5>
+                            </div>
+                            <div class="btn-cart">
+                                <button style="background-color: red; color: #fff; padding: 5px; border: none;" onclick="addtocart('7','boAt Wave Connect Bluetooth...', '3,499', '6,990','Images/daily deals/item4.1.webp');myfunction()">ADD TO CART</button>
+                                <div id="snackbar">Item add to cart ...</div>
+                                <button style="border: 2px solid red; color: red;">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-image">
+        <img src="../Images/productDetais/Home/ItemID-8/bottom.PNG">
+    </div>
+    <footer>
+        <%- include ("../partials/footer"); %>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9edb0442b2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        expandImg.parentElement.style.display = "block";
+        }
+        
+        $.get("../nav.html", function(data){
+        $("#main-container-productpage").replaceWith(data);
+        });
+        $.get("../footer.html", function(data){
+            $("#product-footer").replaceWith(data);
+        })
+        const coloritem1 = document.querySelector(".itemcolor1")
+        const coloritem2 = document.querySelector(".itemcolor2")
+        const colortext = document.querySelector(".color-text")
+        coloritem1.onclick = () =>{
+            if(coloritem1.classList.contains("itemcolor")){
+                coloritem1.classList.remove("itemcolor")
+                coloritem1.classList.add("itemcolor1")}
+                
+            if(coloritem2.classList.contains("product-onclick-effect")){
+                coloritem2.classList.remove("product-onclick-effect")
+                coloritem2.classList.add("itemcolor2")
+            }
+            
+            colortext.innerHTML = `Color: <span >Charcoal Black</span>`
+        }
+        coloritem2.onclick = () =>{
+            if(coloritem1.classList.contains("itemcolor1")){
+                coloritem1.classList.remove("itemcolor1")
+                coloritem1.classList.add("itemcolor")
+            }
+
+            if(coloritem2.classList.contains("itemcolor2")){
+                coloritem2.classList.remove("itemcolor2")
+                coloritem2.classList.add("product-onclick-effect")
+            }
+
+            colortext.innerHTML = `Color: <span >Deep Blue</span>`
+        }
+    </script>
+</body>
+</html>
+

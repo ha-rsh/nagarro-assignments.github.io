@@ -1,0 +1,79 @@
+<style>
+  body{background-color: #211f1f; width: 100%; overflow-x: hidden;}
+  .form-control:focus{box-shadow: none; border: 3px solid white;}
+  .heading{background-color: red; color: white; display: flex; justify-content: center; padding: 0.5rem;}
+  .boat-logo img{ height: 50px; position: relative; left: 3rem; margin-top: 0.5rem;}
+</style>
+
+<div class="heading">
+  All your favourite boAt products at heavy bargains. Shop NOW!
+</div>
+<div class="boat-logo">
+  <img src="../Images/logo.png" alt="boat logo">
+</div>
+<h1 style="margin-top: 1rem;" class="text-center text-white mb-3">
+  <i class="fas fa-user-plus"></i> Register
+</h1>
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div style="background-color: #211f1f;" class="card card-body">
+      <%- include ("./partials/messages"); %>
+      <form action="/users/register" method="POST">
+        <div class="form-floating mb-4">
+          <input 
+            style="background-color: #211f1f;height: 4rem; color: white;"
+            type="name" 
+            name="name" 
+            class="form-control" 
+            id="name" 
+            placeholder="name"
+            autocomplete="off"
+            value="<%= typeof name != 'undefined' ? name : '' %>">
+          <label style="color:white" for="name"><i class="fa-solid fa-user"></i>  Name</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input 
+            style="background-color: #211f1f;height: 4rem; color: white;"
+            type="email" 
+            name="email" 
+            class="form-control" 
+            id="email" 
+            placeholder="email"
+            autocomplete="off"
+            value="<%= typeof email != 'undefined' ? email : '' %>">
+          <label style="color:white" for="email"><i class="fa-solid fa-user"></i> E-mail</label>
+        </div>
+
+        <div class="form-floating mb-4">
+          <input 
+            style="background-color: #211f1f;height: 4rem; color: white;"
+            type="password" 
+            name="password" 
+            class="form-control" 
+            id="password" 
+            placeholder="password"
+            autocomplete="off"
+            value="<%= typeof password != 'undefined' ? password : '' %>">
+          <label style="color:white" for="password"><i class="fa-solid fa-lock"></i> Password</label>
+        </div>
+
+        <div class="form-floating mb-4">
+          <input 
+            style="background-color: #211f1f;height: 4rem; color: white;"
+            type="password" 
+            name="password2" 
+            class="form-control" 
+            id="password2" 
+            placeholder="Confirm Password"
+            autocomplete="off"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+          <label style="color:white" for="password2"><i class="fa-solid fa-user"></i> Confirm Password</label>
+        </div>
+        <button style="background-color: red; height: 4rem; font-weight: 700; font-size: 1.3rem; font-family: sans-serif; color: white;" type="submit" class="btn btn-block">REGISTER</button>
+      </form>
+      <p style="color: white; display: flex; justify-content: center;" class="lead mt-4">
+        Already have an account? <a style="color: rgb(136, 132, 132); margin-left: 10px;" href="/users/login">Login</a></p>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,118 @@
+<div class="timeline">
+  <div class="top-container">
+    <nav class="navbar">
+      <span class="title">
+        <a href="#"><span id="top-header" style="color:aliceblue">Home</span></a>
+      </span>
+      <span class="favourite">
+        <i style="color: gold;" class="fa-regular fa-star"></i>
+      </span>
+    </nav>
+    <div class="form-container">
+      <form action="/tweet" id="tweet-form" method="post">
+        <div class="avatar">
+          <img
+            src="<%= userData.avatar %> "
+            alt="avatar_me"
+            referrerpolicy="no-referrer"
+          />
+        </div>
+        <div class="info">
+          <input type="hidden" id="userId" name="userId" value="<%= userData.id %>" />
+          <textarea
+            name="tweet"
+            id="tweet"
+            placeholder="What's happening?"
+          ></textarea>
+          <hr/>
+          <div class="tweet-bottom">
+            <label for="file-input">
+              <img src="./images/media.PNG">
+            </label>
+            <input style="display: none;" id="file-input" type="file" />
+            <img src="./images/gif.PNG">
+            <img src="./images/emoji.PNG">
+            <img src="./images/calander.PNG">
+            <input class="submit-btn" type="submit" value="Tweet" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="tweets-container">
+    <!-- Tweets -->
+
+    <% tweets.forEach(tweet => { %>
+    <div class="tweet">
+      <div class="avatar">
+        <img src="<%= tweet.avatar %>" alt="avatar" referrerpolicy="no-referrer" />
+      </div>
+      <div class="tweet-content">
+        <div class="tweet-header">
+          <span class="tweet-name">
+            <a href="/profile/<%= tweet.userId %> ">
+              <span> <%= tweet.name %> </span>
+            </a>
+          </span>
+          <span class="tweet-handle">
+            <a href="/profile/<%= tweet.userId %>">
+              <span> @<%= tweet.username %> </span>
+            </a>
+          </span>
+          <% if (tweet.tweetTime < 1) { %>
+            <span class="tweet-time"> less than 1h </span>
+          <% } else { %>
+            <span class="tweet-time"> <%= tweet.tweetTime %></span>
+          <% } %>
+        </div>
+        <div class="tweet-body">
+          <span class="tweet-text">
+            <span>
+              <%= tweet.tweet %>
+            </span>
+          </span>
+        </div>
+        <div class="tweet-footer">
+          <span class="tweet-actions">
+            <a href="#">
+              <i class="fa-regular fa-comment"></i>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-retweet"></i>
+            </a>
+
+            <% if (tweet.isLiked) { %>
+              <a class="like-btn" href="#" data-tweetId="<%= tweet.tweetId %>">
+                <i class="fa-regular fa-heart fa-solid"></i>
+                <span class="numbres"><%= tweet.likeCount %></span>
+              </a>
+            <% }else{ %>
+              <a class="like-btn" href="#" data-tweetId="<%= tweet.tweetId %>">
+                <i class="fa-regular fa-heart"></i>
+                <span class="numbres"><%= tweet.likeCount %></span>
+              </a>
+              <% } %>
+
+            <a href="#">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+      <% if (tweet.userId===userData.id) { %>
+        <button class="delete-tweet" data-tweet-id="<%= tweet.tweetId %>" data-tweet-user="<%= tweet.userId %>">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      <% } %>
+    </div>
+    <% }) %>
+  </div>
+  <script>
+    let tweettext = document.querySelector("#tweet")
+    let tweetbtn= document.querySelector(".submit-btn")
+    tweettext.onkeyup = () => {
+          if(tweettext.value != "") tweetbtn.classList.add("active")
+          else tweetbtn.classList.remove("active")  
+      }
+  </script>
+</div>

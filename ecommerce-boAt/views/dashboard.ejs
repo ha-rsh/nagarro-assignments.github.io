@@ -1,0 +1,450 @@
+<div class="main-container" id="home">
+    <%- include ("./partials/nav"); %>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-pause="null">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="Images/Image Slider/slider-img1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="Images/Image Slider/slider-img2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="Images/Image Slider/slider-img3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="Images/Image Slider/slider-img4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="Images/Image Slider/slider-img5.webp" class="d-block w-100" alt="...">
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+            <span  class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+            <span  class="visually-hidden">Next</span>
+        </button>
+    </div>  
+    <script>
+        const slides = document.querySelectorAll(".carousel-item");
+        const leftBtn = document.querySelector(".carousel-control-prev");
+        const rightBtn = document.querySelector(".carousel-control-next");
+        let currentSlide = 0;
+
+        leftBtn.addEventListener("click", () => {
+        goToSlide(currentSlide - 1);
+        clearInterval(slideInterval);
+        });
+
+        rightBtn.addEventListener("click", () => {
+        goToSlide(currentSlide + 1);
+        clearInterval(slideInterval);
+        });
+
+        function goToSlide(slideNo) {
+        slideNo = slideNo < 0 ? slides.length - 1 : slideNo;
+        slideNo = slideNo >= slides.length ? 0 : slideNo;
+        slides[currentSlide].classList.remove("active");
+        slides[slideNo].classList.add("active");
+        currentSlide = slideNo;
+        }
+        const slideInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+        }, 3000);
+      </script>
+</div>
+<section id="mid-container">
+    <h1 class="heading">Biggest Launches. Dopest Products. 🚀</h1>
+    <div class="product-container">
+        <div class="card">
+            <div class="sale">
+                <span><i class="fa-solid fa-bolt"><span>43%</span></i></span>
+            </div>
+                <div class="item-image" onclick="location.href='/producthome1'">
+                    <img src="Images/biggest launches/item1.1.webp" alt="" class="first">
+                    <img src="Images/biggest launches/item1.2.webp" alt="" class="second">
+                </div>
+            <div class="item-details">
+                    <h1 class="item-name">boAt Airdopes 141 Pro</h1>
+                <hr/>
+                <span class="item-price">
+                    <span class="discount-price">₹ 1,498</span>
+                    <span class="non-discount-price">₹ 2,990</span>
+                </span>
+                <span class="saving">You Save: ₹ 1492 (50%)</span>
+                <button type="button" class="add-to-cart" id="liveToastBtn" onclick="addtocart('1','boAt Airdopes 141 Pro', '1,498', '2,990', 'Images/biggest launches/item1.1.webp');myfunction()">ADD TO CART</button>
+                <div id="snackbar">Item add to cart ...</div>
+                <script>
+                    
+                </script>
+            </div>
+        </div>
+        <div class="card">
+            <div class="sale">
+                <span><i class="fa-solid fa-bolt"><span>57%</span></i></span>
+            </div>
+                <div class="item-image" onclick="location.href='/producthome2'">
+                    <img src="Images/biggest launches/item2.1.webp" alt="" class="first">
+                    <img src="Images/biggest launches/item2.2.webp" alt="" class="second">
+                </div>
+            <div class="item-details">
+                    <h1 class="item-name">boAt Airdopes 121 Pro</h1>
+                <hr/>
+                <span class="item-price">
+                    <span class="discount-price">₹ 1,298</span>
+                    <span class="non-discount-price">₹ 2,990</span>
+                </span>
+                <span class="saving">You Save: ₹ 1692 (57%)</span>
+                <button class="add-to-cart" onclick="addtocart('2','boAt Airdopes 121 Pro', '1,298', '2,990', 'Images/biggest launches/item2.1.webp');myfunction()">ADD TO CART</button>
+                <div id="snackbar">Item add to cart ...</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="sale">
+                <span><i class="fa-solid fa-bolt"><span>70%</span></i></span>
+            </div>
+                <div class="item-image" onclick="location.href='/producthome3'">
+                    <img src="Images/biggest launches/item3.1.webp" alt="" class="first">
+                    <img src="Images/biggest launches/item3.2.webp" alt="" class="second">
+                </div>
+            <div class="item-details">
+                    <h1 class="item-name">Rockerz 330 ANC</h1>
+                <hr/>
+                <span class="item-price">
+                    <span class="discount-price">₹ 1,798</span>
+                    <span class="non-discount-price">₹ 5,999</span>
+                </span>
+                <span class="saving">You Save: ₹ 4201 (70%)</span>
+                <button class="add-to-cart" onclick="addtocart('3','Rockerz 330 ANC', '1,798', '5,999', 'Images/biggest launches/item3.1.webp');myfunction()">ADD TO CART</button>
+                <div id="snackbar">Item add to cart ...</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="sale">
+                <span><i class="fa-solid fa-bolt"><span>54%</span></i></span>
+            </div>
+                <div class="item-image" onclick="location.href='/producthome4'">
+                    <img src="Images/biggest launches/item4.1.webp" alt="" class="first">
+                    <img src="Images/biggest launches/item4.2.webp" alt="" class="second">
+                </div>
+            <div class="item-details">
+                    <h1 class="item-name">boAt Airdopes 413 ANC</h1>
+                <hr/>
+                <span class="item-price">
+                    <span class="discount-price">₹ 2,298</span>
+                    <span class="non-discount-price">₹ 4,990</span>
+                </span>
+                <span class="saving">You Save: ₹ 2692 (54%)</span>
+                <button class="add-to-cart" onclick="addtocart('4','boAt Airdopes 413 ANC', '2,298', '4,990', 'Images/biggest launches/item4.1.webp');myfunction()">ADD TO CART</button>
+                <div id="snackbar">Item add to cart ...</div>
+            </div>
+        </div>
+    </div> 
+</section>
+<section id="mid-container2">
+    <a href="">
+        <h1 class="heading">Daily Deals</h1>
+    </a>
+    <a href="#">
+        <div class="sale-timer-container">
+          <span class="sale-text">
+            <i class="fa-solid fa-bolt"></i> FLASH SALE
+          </span>
+          <span class="sale-timer">
+            Ending In:
+            <span class="timer">
+              <span class="hour">00h</span>
+              <span class="minute">00m</span>
+              <span class="seconds">00s</span>
+              <span class="milisecond">000</span>
+            </span>
+          </span>
+        </div>
+    </a>
+    <script>
+        const timerInterval = setInterval(() => {
+            const current = new Date();
+            let hr = current.getHours();
+            let min = current.getMinutes();
+            let sec = current.getSeconds();
+            sec = 60-sec;
+            min = 60-min;
+            min = sec===0?min:min-1;
+            hr = 24-hr;
+            hr = (min===0&&sec===0)?hr:hr-1;
+            document.querySelector('.hour').innerText = hr.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})+"hr";
+            document.querySelector('.minute').innerText = min.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})+"min";
+            document.querySelector('.second').innerText = sec.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})+"sec";
+        },1000);
+
+        const msInterval = setInterval(() => {
+            document.querySelector('.milisecond').innerText = 1000-new Date().getMilliseconds();
+        }, 1);
+    </script>
+    <div class="product-container">
+        <div class="card">
+            <div class="sale">
+                <span><i class="fa-solid fa-bolt"><span>43%</span></i></span>
+            </div>
+                <div class="item-image" onclick="location.href='/producthome5'">
+                    <img src="Images/biggest launches/item1.1.webp" alt="" class="first">
+                    <img src="Images/biggest launches/item1.2.webp" alt="" class="second">
+                </div>
+            <div class="item-details">
+                    <h1 class="item-name">boAt Airdopes 141 Pro</h1>
+                <span class="product-review">
+                    <span class="review-star">
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="review-rating"> 4.8 |</span>
+                    <span class="review-count">1116 reviews</span>
+                </span>
+                <hr/>
+                <span class="item-price">
+                    <span class="discount-price">₹ 1,498</span>
+                    <span class="non-discount-price">₹ 2,990</span>
+                </span>
+                <span class="saving">You Save: ₹ 1492 (50%)</span>
+                <button class="add-to-cart" onclick="addtocart('1','boAt Airdopes 141 Pro', '1,498', '2,990', 'Images/biggest launches/item1.1.webp');myfunction()">ADD TO CART</button>
+                <div id="snackbar">Item add to cart ...</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="sale">
+                <span><i class="fa-solid fa-bolt"><span>71%</span></i></span>
+            </div>
+                <div class="item-image" onclick="location.href='/producthome6'">
+                    <img src="Images/daily deals/item2.1.webp" alt="" class="first">
+                    <img src="Images/daily deals/item2.2.webp" alt="" class="second">
+                </div>
+            <div class="item-details">
+                    <h1 class="item-name">boAt Wave Lite Smartwatch - 1.69...</h1>
+                <span class="product-review">
+                    <span class="review-star">
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="review-rating"> 4.9 |</span>
+                    <span class="review-count"> 31 reviews</span>
+                </span>
+                <hr/>
+                <span class="item-price">
+                    <span class="discount-price">₹ 1,999</span>
+                    <span class="non-discount-price">₹ 6,990</span>
+                </span>
+                <span class="saving">You Save: ₹ 4991 (71%)</span>
+                <button class="add-to-cart" onclick="addtocart('5','boAt Wave Lite Smartwatch - 1.69...', '1,999', '6,990', 'Images/daily deals/item2.1.webp');myfunction()">ADD TO CART</button>
+                <div id="snackbar">Item add to cart ...</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="sale">
+                <span><i class="fa-solid fa-bolt"><span>64%</span></i></span>
+            </div>
+                <div class="item-image" onclick="location.href='/producthome7'">
+                    <img src="Images/daily deals/item3.1.webp" alt="" class="first">
+                    <img src="Images/daily deals/item3.2.webp" alt="" class="second">
+                </div>
+            <div class="item-details">
+                    <h1 class="item-name">boAt Rockerz 550</h1>
+                <span class="product-review">
+                    <span class="review-star">
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="review-rating"> 4.8 |</span>
+                    <span class="review-count">321 reviews</span>
+                </span>
+                <hr/>
+                <span class="item-price">
+                    <span class="discount-price">₹ 1,799</span>
+                    <span class="non-discount-price">₹ 4,999</span>
+                </span>
+                <span class="saving">You Save: ₹ 3200 (64%)</span>
+                <button class="add-to-cart" onclick="addtocart('6','boAt Rockerz 550', '1,799', '4,999','Images/daily deals/item3.1.webp');myfunction()">ADD TO CART</button>
+                <div id="snackbar">Item add to cart ...</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="sale">
+                <span><i class="fa-solid fa-bolt"><span>50%</span></i></span>
+            </div>
+                <div class="item-image" onclick="location.href='/producthome8'">
+                    <img src="Images/daily deals/item4.1.webp" alt="" class="first">
+                    <img src="Images/daily deals/item4.2.webp" alt="" class="second">
+                </div>
+            <div class="item-details">
+                    <h1 class="item-name">boAt Wave Connect Bluetooth...</h1>
+                <span class="product-review">
+                    <span class="review-star">
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="review-rating"> 4.9 |</span>
+                    <span class="review-count">63 reviews</span>
+                </span>
+                <hr/>
+                <span class="item-price">
+                    <span class="discount-price">₹ 3,499</span>
+                    <span class="non-discount-price">₹ 6,990</span>
+                </span>
+                <span class="saving">You Save: ₹ 3491 (50%)</span>
+                <button class="add-to-cart" onclick="addtocart('7','boAt Wave Connect Bluetooth...', '3,499', '6,990','Images/daily deals/item4.1.webp');myfunction()">ADD TO CART</button>
+                <div id="snackbar">Item add to cart ...</div>
+            </div>
+        </div>
+    </div> 
+    <div id="subcontainer" style="z-index: 1;">
+        <div class="sub-card">
+            <div class="video-wrapper">
+                <video src="Images/daily deals/vid1.mp4" type="video/mp4" autoplay muted loop></video>
+                <div class="image-wrapper">
+                    <img src="Images/daily deals/vid1sub.webp" alt="">
+                </div>
+            </div>
+            <div class="sub-data">
+                <div class="sub-data-title">
+                    <p style="font-size: 14; font-weight: 700; color: #000000;" class="title-para">Rockerz 330 ANC | Best Neeckban...</p>
+                    <p style="font-size: 14; font-weight: 700; color: grey;" class="title-subpara">Rockerz Wireless</p>
+                    <div style="width: 70%; padding: 0.5px; background-color: grey; margin-top: 2px; margin-left: 15%;"></div>
+                </div>
+                <div class="bottom-content">
+                    <div class="bottom-text">
+                        <p style="color: rgb(255, 0, 0); font-weight:600; font-size: 12px; padding: 1px 0px;">New Arrival</p>
+                    </div>
+                    <div class="bottom-price-content">
+                        <span class="price-data" style="color:rgb(255, 0, 0); font-weight: 600; font-size:17px;">₹1,798</span>
+                        <span style="margin-left: 12px; text-decoration: line-through; font-weight: 500; color: rgb(0, 0, 0);">₹5,999</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-card">
+            <div class="video-wrapper">
+                <video src="Images/daily deals/vid2.mp4" type="video/mp4" autoplay muted loop></video>
+                <div class="image-wrapper">
+                    <img src="Images/daily deals/vid2sub.webp" alt="">
+                </div>
+            </div>
+            <div class="sub-data">
+                <div class="sub-data-title">
+                    <p style="font-size: 14; font-weight: 700; color: #000000;" class="title-para">boAt Storm Pro</p>
+                    <p style="font-size: 14; font-weight: 700; color: grey;" class="title-subpara">Smart watches</p>
+                    <div style="width: 70%; padding: 0.5px; background-color: grey; margin-top: 2px; margin-left: 15%;"></div>
+                </div>
+                <div class="bottom-content">
+                    <div class="bottom-text">
+                        <p style="color: rgb(255, 0, 0); font-weight:600; font-size: 12px; padding: 1px 0px;">New Arrival</p>
+                    </div>
+                    <div class="bottom-price-content">
+                        <span class="price-data" style="color:rgb(255, 0, 0); font-weight: 600; font-size:17px;">₹3,999</span>
+                        <span style="margin-left: 12px; text-decoration: line-through; font-weight: 500; color: rgb(0, 0, 0);">₹6,990</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-card">
+            <div class="video-wrapper">
+                <video src="Images/daily deals/vid3.mp4" type="video/mp4" autoplay muted loop></video>
+                <div class="image-wrapper">
+                    <img src="Images/daily deals/vid3sub.webp" alt="">
+                </div>
+            </div>
+            <div class="sub-data">
+                <div class="sub-data-title">
+                    <p style="font-size: 14; font-weight: 700; color: #000000;" class="title-para">boAt Airdopes 413 ANC</p>
+                    <p style="font-size: 14; font-weight: 700; color: grey;" class="title-subpara">Airdopes TWS</p>
+                    <div style="width: 70%; padding: 0.5px; background-color: grey; margin-top: 2px; margin-left: 15%;"></div>
+                </div>
+                <div class="bottom-content">
+                    <div class="bottom-text">
+                        <p style="color: rgb(255, 0, 0); font-weight:600; font-size: 12px; padding: 1px 0px;">New Arrival</p>
+                    </div>
+                    <div class="bottom-price-content">
+                        <span class="price-data" style="color:rgb(255, 0, 0); font-weight: 600; font-size:17px;">₹2,298</span>
+                        <span style="margin-left: 12px; text-decoration: line-through; font-weight: 500; color: rgb(0, 0, 0);">₹4,990</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-card">
+            <div class="video-wrapper">
+                <video src="Images/daily deals/vid4.mp4" type="video/mp4" autoplay muted loop></video>
+                <div class="image-wrapper">
+                    <img src="Images/daily deals/vid4sub.webp" alt="">
+                </div>
+            </div>
+            <div class="sub-data">
+                <div class="sub-data-title">
+                    <p style="font-size: 14; font-weight: 700; color: #000000;" class="title-para">boAt Airdopes 121 PRO</p>
+                    <p style="font-size: 14; font-weight: 700; color: grey;" class="title-subpara">Airdopes TWS</p>
+                    <div style="width: 70%; padding: 0.5px; background-color: grey; margin-top: 2px; margin-left: 15%;"></div>
+                </div>
+                <div class="bottom-content">
+                    <div class="bottom-text">
+                        <p style="color: rgb(255, 0, 0); font-weight:600; font-size: 12px; padding: 1px 0px;">New Arrival</p>
+                    </div>
+                    <div class="bottom-price-content">
+                        <span class="price-data" style="color:rgb(255, 0, 0); font-weight: 600; font-size:17px;">₹1,298</span>
+                        <span style="margin-left: 12px; text-decoration: line-through; font-weight: 500; color: rgb(0, 0, 0);">₹2,990</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-card">
+            <div class="video-wrapper">
+                <video src="Images/daily deals/vid5.mp4" type="video/mp4" autoplay muted loop></video>
+                <div class="image-wrapper">
+                    <img src="Images/daily deals/vid5sub.webp" alt="">
+                </div>
+            </div>
+            <div class="sub-data">
+                <div class="sub-data-title">
+                    <p style="font-size: 14; font-weight: 700; color: #000000;" class="title-para">boAt Wave Select Smartwatch |...</p>
+                    <p style="font-size: 14; font-weight: 700; color: grey;" class="title-subpara">Smart watches</p>
+                    <div style="width: 70%; padding: 0.5px; background-color: grey; margin-top: 2px; margin-left: 15%;"></div>
+                </div>
+                <div class="bottom-content">
+                    <div class="bottom-text">
+                        <p style="color: rgb(255, 0, 0); font-weight:600; font-size: 12px; padding: 1px 0px;">New Arrival</p>
+                    </div>
+                    <div class="bottom-price-content">
+                        <span class="price-data" style="color:rgb(255, 0, 0); font-weight: 600; font-size:17px;">₹2,999</span>
+                        <span style="margin-left: 12px; text-decoration: line-through; font-weight: 500; color: rgb(0, 0, 0);">₹6,990</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-card">
+            <div class="video-wrapper">
+                <video src="Images/daily deals/vid6.mp4" type="video/mp4" autoplay muted loop></video>
+                <div class="image-wrapper">
+                    <img src="Images/daily deals/vid6sub.webp" alt="">
+                </div>
+            </div>
+            <div class="sub-data">
+                <div class="sub-data-title">
+                    <p style="font-size: 14; font-weight: 700; color: #000000;" class="title-para">boAt Airdopes</p>
+                    <p style="font-size: 14; font-weight: 700; color: grey;" class="title-subpara">Airdopes TWS</p>
+                    <div style="width: 70%; padding: 0.5px; background-color: grey; margin-top: 2px; margin-left: 15%;"></div>
+                </div>
+                <div class="bottom-content">
+                    <div class="bottom-text">
+                        <p style="color: rgb(255, 0, 0); font-weight:600; font-size: 12px; padding: 1px 0px;">New Arrival</p>
+                    </div>
+                    <div class="bottom-price-content">
+                        <span class="price-data" style="color:rgb(255, 0, 0); font-weight: 600; font-size:17px;">₹1,198</span>
+                        <span style="margin-left: 12px; text-decoration: line-through; font-weight: 500; color: rgb(0, 0, 0);">₹4,490</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <%- include ("./partials/footer"); %>
+</footer>

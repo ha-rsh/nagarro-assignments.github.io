@@ -1,0 +1,27 @@
+<style>
+  body{background-color: #282727; width: 100%; overflow-x: hidden;}
+  .form-control:focus{box-shadow: none; border: 3px solid white;}
+  .heading-welcome{background-color: red; color: white; display: flex; justify-content: center; padding: 0.5rem;}
+  .card-body{width: 100%;}
+  .boat-logo img{ height: 50px; position: relative; left: 3rem; margin-top: 0.5rem;}
+</style>
+
+<div class="heading-welcome">
+  All your favourite boAt products at heavy bargains. Shop NOW!
+</div>
+<div class="boat-logo">
+  <img src="../Images/logo.png" alt="boatlogo">
+</div>
+
+<div class="row mt-3">
+  <div class="col-md-6 m-auto">
+    <div style="background-color: black;" class="card card-body text-center">
+      <video src="Images/welcome.mp4" type="video/mp4" autoplay muted loop></video>
+      <p>Create an account or login</p>
+      <a style="background-color: red; color: white;" href="/users/register" class="btn  btn-block mb-2"
+        >Register</a
+      >
+      <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+    </div>
+  </div>
+</div>

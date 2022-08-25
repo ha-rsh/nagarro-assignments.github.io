@@ -1,0 +1,154 @@
+<div class="top-heading">
+    All your favourite boAt products at heavy bargains. Shop NOW!
+  </div>
+  <nav>
+    <div class="nav-logo">
+        <img src="../Images/logo.png" alt="boat logo">
+    </div>
+    <div class="nav-links">
+        <div class="nav-link shop-dropdown">
+            <a href="#">Shop <i class="fa-solid fa-angle-down"></i></a>
+            <div class="shop-content" id="shop-link">
+                <ul>
+                    <li><a href="/airdopes"><img src="../Images/shop/airdopes.webp" alt="airdopes"></a></li>
+                    <li><a href="/rockerz"><img src="../Images/shop/rockerz.webp" alt="rockerz"></a></li>
+                    <li><a href="/smartWatch"><img src="../Images/shop/smartWatches.webp" alt="smartWatches"></a></li>
+                    <li><a href="/dashboard"><img src="../Images/shop/baseHeads.webp" alt="Bassheads"></a></li>
+                    <li><a href="/dashboard"><img src="../Images/shop/stoneSpeakers.webp" alt="stoneSpeakers"></a></li>
+                    <li><a href="/dashboard"><img src="../Images/shop/aavante.webp" alt="aavante"></a></li>
+                    <li><a href="/dashboard"><img src="../Images/shop/mobileAccessories.webp" alt="mobileAccessories"></a></li>
+                    <li><a href="/dashboard"><img src="../Images/shop/Trebel.webp" alt="Trebel"></a></li>
+                    <li><a href="/dashboard"><img src="../Images/shop/LimitedEdition.webp" alt="limitedEdition"></a></li>
+                    <li><a href="/dashboard"><img src="../Images/shop/misfitGrooming.webp" alt="misfit grooming"></a></li>
+                    <li><a href="/dashboard"><img src="../Images/shop/ImmortalGrooming.webp" alt="immortal gaming"></a></li>
+                </ul>
+            </div>
+        </div>
+        <span class="nav-link">
+            <a href="#">Daily Deals</a>
+        </span>
+        <span class="nav-link">
+            <a href="#">Offer Zone<a>
+        </span>
+        <div class="nav-link dropdown">
+            <a href="#">More <i class="fa-solid fa-angle-down"></i></a>
+            <div class="content">
+                <ul>
+                    <li><a class="hover-underline-animation" href="#">Gifting</a></li>
+                    <li><a href="/dashboard">Do What Floats Your boAt</a></li>
+                    <li><a href="/dashboard">Blogs</a></li>
+                    <li><a href="/dashboard">Meet the boAtheads</a></li>
+                    <li><a href="/dashboard">Corporate Orders</a></li>
+                    <li><a href="/dashboard">Earn RS.100</a></li>
+                    <li><a href="/dashboard">Careers</a></li>
+                    <li><a href="/dashboard">Social Responsibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="nav-right">
+        <span class="search-dropdown">
+            <div class="box-icons">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input id="text" name="text" autocomplete="off" type="text" placeholder="Search..." onkeyup="search_product()" />
+                <span class="btn-container"><button id="btn" onclick="cleardata()"><i style="position: relative; color: rgb(47, 47, 198);" class="fa-solid fa-xmark"></i></button></span>
+            </div>
+            <div class="search-content">
+                <ul>
+                    <!-- <li style="font-size: 15px; color: white;" class="no-result-show">no result found</li> -->
+                    <li class="product"><a href="/airdopes">Wireless Earbuds<span style="color: red;position: relative; float: right; cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/rockerz">Wireless headphones<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/smartWatch">Smart Watches<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/dashboard">Wired Baseheads<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/dashboard">Speakers<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/dashboard">Theatre<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/dashboard">Mobile Accessories<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/dashboard">Trebel For Women<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/dashboard">Limited Edition<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/dashboard">Misfit Grooming<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                    <li class="product"><a href="/dashboard">Immortal Gaming<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a></li>
+                </ul>
+            </div>
+        </span>
+        
+        <script>
+            const button = document.querySelector("#btn")
+            let x = document.getElementsByClassName('product');
+            function cleardata(){
+                let input = document.getElementById('text')
+                let listdata = document.getElementsByClassName('product');
+                for (i = 0; i < listdata.length; i++) { 
+                    listdata[i].style.display="list-item";}  
+                input.value = "";
+                button.classList.remove("active")
+                x[x.length-1].innerHTML = `<a href="/dashboard">Immortal Gaming<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a>`
+            }
+        
+            function search_product() {
+                let input = document.getElementById('text').value
+                input=input.toLowerCase();
+                if(input.trim() != 0){
+                   button.classList.add("active")
+                }
+                else{button.classList.remove("active")}
+                let content = document.querySelector("search-content")
+                let noresult = document.getElementsByClassName("no-result-show")
+                let count = 0;
+                for (i = 0; i < x.length; i++) { 
+                    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                        x[i].style="display:none";
+                        if(x[i].style.display == "none"){
+                            count += 1
+                        }
+                        if(count==x.length){x[x.length-1].innerText = "No result found ..."; x[x.length-1].style.cssText="display:line-item;color:white;font-size:15px;cursor:pointer"}
+                        else{x[x.length-1].innerHTML = `<a href="/dashboard">Immortal Gaming<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a>`}
+                    }
+                    else {
+                        x[i].style.display="list-item";  
+                                
+                    }
+        
+                if(input==""){x[x.length-1].innerHTML = `<a href="/dashboard">Immortal Gaming<span style="color: red;position: relative; float: right;cursor: pointer;">↖</span></a>`}
+            }
+        }
+        </script>
+        <span><i style="color:white;" class="fa fa-user" onclick="displaylogout()"></i>
+          <div class="logout-dropdown">
+             <h5>Hi <%= user.name.split(" ")[0] %><i style="cursor: pointer; color:#fff; float: right; font-size: 15px;" onclick="boxhide()" class="fa-solid fa-xmark"></i></h5>
+            <a href="/users/logout"">Logout</a>
+          </div>
+        </span>
+        
+        <span><i style="color: white;" class="fa-solid fa-gift"></i></span>
+        <span>
+            <div style="display: flex; align-items: center;">
+                <i style="color:white" class="fa fa-shopping-cart" onclick="cartshow()"></i>
+                <span class="cart-quantity" style=" position: relative; top: -0.8rem; right: 1.2rem; display: flex; justify-content: center; align-items: center; font-size: 10px; color: white; background-color: red; height: 25px; width: 25px; border-radius: 50%;">0</span>
+            </div>
+            <div class="cart-drawer">
+                    <h1 class="cart-head">Your Cart(Cart) <i style="cursor: pointer; color:#fff; float: right; font-size: 15px;" onclick="carthide()" class="fa-solid fa-xmark"></i></h1>
+                    <h2>Free Shipping sitewide | Cash On Delivery available for order value upto ₹3000</h2>
+                    <div class="cart-items">
+
+                    </div>
+                    <div class="shipping-details">
+                        <h1 style="background-color: white; color: black; font-weight: 500;">Shipping <span style="float: right;">FREE</span></h1>
+                    </div>
+                    <div class="total-price"></div>
+                    <div style="padding: 0.5rem;"><a href="/checkout"><button style="height: 3rem; background-color: red; color: white; width: 100%; border-radius: 10px; padding-top: 1rem; padding-bottom: 2.5rem; border: none; margin-top: 3rem;">CHECKOUT</button></a></div>
+                </div>
+            </div>
+        </span>
+        <script>
+            let logoutshow = document.querySelector(".logout-dropdown")
+            let cartdrawer = document.querySelector(".cart-drawer")
+            function boxhide(){logoutshow.style = "display:none"}
+
+            function carthide(){cartdrawer.style = "display:none"}
+  
+            function displaylogout(){logoutshow.style = "display:block"}
+
+            function cartshow(){cartdrawer.style = "display:block"}
+          </script>
+    </div>
+</nav>

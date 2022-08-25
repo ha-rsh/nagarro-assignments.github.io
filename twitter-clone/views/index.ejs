@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Twitter</title>
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="left-column">
+        <img src="./images/twitter.png">
+      </div>
+      <div class="right-column">
+          <div class="logo"><i class="fa-brands fa-twitter"></i></div>
+          <h1 class="main-heading">Happening Now</h1>
+          <h2 class="sub-heading">Join Twitter Today</h2>
+          <div class="form-container">
+              <div class="social-icons">
+                <a class="btn btn-light btn-google rounded-pill" href="/auth/google">
+                  <i class="fa-brands fa-google"></i>
+                  <span>Sign in with Google</span>
+                </a>
+                <a class="btn btn-light btn-apple rounded-pill">
+                  <i class="fa-brands fa-apple"></i>
+                  <span>Sign in with Apple</span>
+                </a>
+              </div>
+              <span class="or">or</span>
+              <hr />
+              <a id="local-signup-modal-btn" class="btn rounded-pill" data-bs-toggle="modal"  data-bs-target="#local-signup-modal"> Sign up with phone or email </a>
+              <div class="terms mt-3">
+                  <span class="text-muted">
+                      By signing up, you agree to the <a href="https://twitter.com/tos" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="https://twitter.com/privacy" target="_blank" rel="noopener noreferrer">Privacy
+                      Policy</a>, including <a href="https://help.twitter.com/rules-and-policies/twitter-cookies" target="_blank" rel="noopener noreferrer">Cookie Use</a>.
+                  </span>
+              </div>
+              <div class="signin-label">
+              <h6>Already have an account?</h6>
+              <a href="#" id="btn-signin" class="btn d-block rounded-pill" data-bs-toggle="modal" data-bs-target="#local-login-modal">Sign in</a>
+          </div>
+          </div>
+      </div>
+  </div>
+  <footer>
+      <div class="footer-container">
+        <a href="#" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Help Center</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">terms of service</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">privacy policy</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Accessibility</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">ads info</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">blog</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">status</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">careers</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">brand resources</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">advertising</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">marketing</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">twitter for business</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">developers</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">directory</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">settings</a>
+      </div>
+      <span>&copy;2022 Made with <i class="fa-solid fa-heart"></i> by Harshit Pandey</span>
+  </footer>
+  
+  <!-- local-signup-modal -->
+  <div id="local-signup-modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div style="width: 45rem;" class="modal-content">
+        <div class="modal-header">
+          <h5 style="position: relative; left: 3rem;" class="modal-title">Sign Up</h5>
+          <button style="position: relative; left: 30rem;" type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h3 class="heading">Create your account</h3>
+          <div class="modal-gif">
+            <img src="./images/formgif.gif" >
+          </div>
+          <form action="/auth/signUp" method="post" id="local-signup-form">
+            <span>
+              <div class="form-floating">
+                <input type="text" name="name" class="form-control name-input" id="name-input-local" placeholder="name">
+                <label for="name-input-local"><i class="fa-solid fa-user"></i> Your Name</label>
+              </div>
+              <div class="form-floating">
+                <input type="email" name="email" class="form-control email-input" id="email-input-local" placeholder="email id">
+                <label for="email-input-local"><i class="fa-solid fa-envelope"></i> Your Email</label>
+              </div>
+            </span>
+            <span>
+              <div class="form-floating">
+                <input type="password" name="password" class="form-control password-input" id="password-input-local" placeholder="password">
+                <label for="password-input-local"><i class="fa-solid fa-lock"></i> Password</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" name="confirmPassword" class="form-control confirm-password-input" id="confirm-password-input-local" placeholder="confirm password">
+                <label for="confirm-password-input-local"><i class="fa-solid fa-key"></i> Repeat Your Password</label>
+              </div>
+            </span>
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- local-login-modal -->
+    <div id="local-login-modal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 style="position: relative; left: 3rem;" class="modal-title">Log in</h5>
+            <button style="position: relative; left: 23rem;" type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h3 class="heading">Sign in to your account</h3>
+            <form action="/auth/login" method="post" id="local-login-form">
+              <div class="login-data-box">
+                <div>
+                  <div class="form-floating">
+                    <input type="email" name="email" class="form-control email-input" id="email-input-login" placeholder="email id">
+                    <label for="email-input-login"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" name="password" class="form-control password-input" id="password-input-login" placeholder="password">
+                    <label for="password-input-login"><i class="fa-solid fa-lock"></i> Password</label>
+                  </div>
+                </div>
+                <div>
+                  <img style="height: 12rem;" src="./images/logingif.gif" >
+                </div>
+              </div>
+              <button type="submit">Log in</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/95f68113d2.js" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

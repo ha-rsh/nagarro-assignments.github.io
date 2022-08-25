@@ -1,0 +1,28 @@
+<div class="bg-dark">
+    <div class="w-full p-3 font-thin text-center text-sm text-white">
+        <p class="w-auto">
+            India's fastest growing audio &amp; wearables brand. The most incredible
+            range of wireless earphones earbuds headphones smart watches, and home audio
+            <br />
+            From workouts to adventures, boAt will get you sailing!
+        </p>
+    </div>
+    <button style="background-color: #fff;" type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+        <a href="#home"><img style="margin-left: 14px;" src="../Images/top.webp" alt="go-to-top"></a>
+    </button>
+    <div class="text-white text-center p-3">
+        © 2022 Harshit Pandey. All Rights Reserved.
+    </div>
+</div>
+<script>
+    window.onscroll = () => {
+        if (pageYOffset >= 200) document.getElementById('btn-back-to-top').style.visibility = "visible";
+        
+        else document.getElementById('btn-back-to-top').style.visibility = "hidden";
+    };
+
+    document.getElementById('btn-back-to-top').onclick = function()
+    {
+        scrollTo(document.body, 0, 0);
+    }
+</script>

@@ -30,3 +30,11 @@ window.onload = function(){
         document.querySelector('.milisecond').innerText = 1000-new Date().getMilliseconds();
     }, 1);
 }
+
+ $.get("../nav.html", function(data){
+$("#main-container-productpage").replaceWith(data);
+});
+$.get("../footer.html", function(data){
+    $("#product-footer").replaceWith(data);
+});
+
